@@ -1,0 +1,77 @@
+CREATE DATABASE teacher;
+use teacher;
+
+DROP TABLE IF EXISTS t_root;
+CREATE TABLE t_root (
+    id int(11) NOT NULL AUTO_INCREMENT,
+    admin_name varchar(255) NOT NULL,
+    admin_password VARCHAR(255) NOT NULL,
+    create_time TIMESTAMP NOT NULL default current_timestamp comment '创建时间',
+    update_time timestamp not null default current_timestamp on update current_timestamp comment '修改时间',
+    PRIMARY KEY (id),
+    UNIQUE KEY UK_NAME (admin_name)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+INSERT INTO t_root (admin_name, admin_password) VALUE ("root", "123456");
+
+DROP TABLE IF EXISTS t_user;
+CREATE TABLE t_user (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    user_name VARCHAR(255) NOT NULL,
+    user_pwd VARCHAR(255) NOT NULL,
+    user_nickname VARCHAR(255) NOT NULL,
+    user_images VARCHAR(255) DEFAULT NULL COMMENT "头像",
+    user_birthday TIMESTAMP NOT NULL,
+    user_type INT(10) NOT NULL,
+    user_title VARCHAR(255) DEFAULT "助教" COMMENT "职称",
+    create_time TIMESTAMP NOT NULL default current_timestamp comment '创建时间',
+    update_time timestamp not null default current_timestamp on update current_timestamp comment '修改时间',
+    PRIMARY KEY (id),
+    UNIQUE KEY UK_NAME (user_name)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS t_lesson;
+CREATE TABLE t_lesson (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    lesson_name VARCHAR(255) NOT NULL,
+    lesson_describe TEXT DEFAULT NULL,
+    lesson_image VARCHAR(255) DEFAULT NULL,
+    lesson_class_hour INT DEFAULT 0 COMMENT "课时",
+    create_time TIMESTAMP NOT NULL default current_timestamp comment '创建时间',
+    update_time timestamp not null default current_timestamp on update current_timestamp comment '修改时间',
+    PRIMARY KEY (id),
+    UNIQUE KEY UK_NAME (lesson_name)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS t_select_lesson;
+CREATE TABLE t_select_lesson (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    user_id INT(11) NOT NULL,
+    lesson_id INT(11) NOT NULL,
+    lesson_hour int DEFAULT 0 COMMENT "已修课时",
+    PRIMARY KEY (id),
+    CONSTRAINT fk_uid FOREIGN KEY (user_id) REFERENCES t_user (id),
+    CONSTRAINT fk_lid FOREIGN KEY (lesson_id) REFERENCES t_lesson(id)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS t_bbs;
+CREATE TABLE t_bbs (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    bbs_title VARCHAR(255) NOT NULL,
+    bbs_content TEXT NOT NULL,
+    bbs_author VARCHAR(255) NOT NULL,
+    create_time TIMESTAMP NOT NULL default current_timestamp comment '创建时间',
+    update_time timestamp not null default current_timestamp on update current_timestamp comment '修改时间',
+    PRIMARY KEY (id)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS t_news;
+CREATE TABLE t_news (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    news_title VARCHAR(255) NOT NULL,
+    news_content TEXT NOT NULL,
+    news_author VARCHAR(255) NOT NULL,
+    create_time TIMESTAMP NOT NULL default current_timestamp comment '创建时间',
+    update_time timestamp not null default current_timestamp on update current_timestamp comment '修改时间',
+    PRIMARY KEY (id)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
