@@ -1,4 +1,4 @@
-package com.zx.teachers.Repository;
+package com.zx.teachers.Entity;
 
 import lombok.Data;
 
