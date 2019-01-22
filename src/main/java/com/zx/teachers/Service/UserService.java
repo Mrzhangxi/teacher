@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+
 public interface UserService {
 
     /**
@@ -29,5 +29,17 @@ public interface UserService {
      */
     List<User> getAllUserByUserType(int userTpye);
 
-    User modifyUser()
+    /**
+     * 修改User信息
+     * @param user 修改的User的完整信息
+     * @return
+     */
+    User modifyUser(User user);
+
+    /**
+     * 删除User
+     * @param user
+     * @return
+     */
+    User deleteUser(User user);
 }
