@@ -4,3 +4,5 @@ spring:
     username: root
     password:
     url: jdbc:mysql://localhost/teacher?useSSL=false&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+  jpa:
+    show-sql: true

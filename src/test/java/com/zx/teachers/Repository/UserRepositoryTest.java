@@ -50,6 +50,6 @@ public class UserRepositoryTest {
 
     @Test
     public void testDModify() {
-        userRepository.updateById();
+        userRepository.updateById(1);
     }
 }

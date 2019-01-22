@@ -53,8 +53,15 @@ public class UserServiceImplTest {
     public void testDModifyUser() {
         User user = new User();
         user.setId(1);
-        user.setUserTitle("副教授");
+        user.setUserTitle("教授");
         User user1 = userService.modifyUser(user);
         System.out.println(user1);
+    }
+
+    @Test
+    public void testEDeleteUser() {
+        User user = new User();
+        user.setId(3);
+        System.out.println(userService.deleteUser(user));
     }
 }

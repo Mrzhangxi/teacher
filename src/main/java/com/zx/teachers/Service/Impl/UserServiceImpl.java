@@ -34,15 +34,20 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User modifyUser(User user) {
-//        User oldUser = userRepository.findById(1);
-//        oldUser.setUserTitle(user.getUserTitle());
-//
-//        return oldUser;
-        return null;
+        int userId = user.getId();
+        User oldUser = userRepository.findById(userId);
+        oldUser.setUserTitle(user.getUserTitle());
+        userRepository.save(oldUser);
+        return userRepository.findById(userId);
+//        return null;
     }
 
     @Override
     public User deleteUser(User user) {
-        return null;
+        int userId = user.getId();
+        User oldUser = userRepository.findById(userId);
+        oldUser.setUserFlag(99);
+        userRepository.save(oldUser);
+        return userRepository.findById(userId);
     }
 }
