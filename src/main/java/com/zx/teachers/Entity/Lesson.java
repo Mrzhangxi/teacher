@@ -16,6 +16,7 @@ public class Lesson {
     private String lessonDescribe;
     private String lessonImage;
     private Integer lessonClassHour;
+    private Integer lessonFlag;
     private Date createTime;
     private Date updateTime;
 }

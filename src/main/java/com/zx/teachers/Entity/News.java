@@ -10,6 +10,7 @@ public class News {
     private String newsTitle;
     private String newsContent;
     private String newsAuthor;
+    private Integer newsFlag;
     private Date createTime;
     private Date updateTime;
 }

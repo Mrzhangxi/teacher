@@ -42,6 +42,7 @@ CREATE TABLE t_lesson (
     lesson_describe TEXT DEFAULT NULL,
     lesson_image VARCHAR(255) DEFAULT NULL,
     lesson_class_hour INT DEFAULT 0 COMMENT "课时",
+    lesson_flag INT DEFAULT 1,
     create_time TIMESTAMP NOT NULL default current_timestamp comment '创建时间',
     update_time timestamp not null default current_timestamp on update current_timestamp comment '修改时间',
     PRIMARY KEY (id),
@@ -57,6 +58,9 @@ CREATE TABLE t_select_lesson (
     user_id INT(11) NOT NULL,
     lesson_id INT(11) NOT NULL,
     lesson_hour int DEFAULT 0 COMMENT "已修课时",
+    select_lesson_flag INT DEFAULT 1,
+    create_time TIMESTAMP NOT NULL default current_timestamp comment '创建时间',
+    update_time timestamp not null default current_timestamp on update current_timestamp comment '修改时间',
     PRIMARY KEY (id),
     CONSTRAINT fk_uid FOREIGN KEY (user_id) REFERENCES t_user (id),
     CONSTRAINT fk_lid FOREIGN KEY (lesson_id) REFERENCES t_lesson(id)
@@ -72,6 +76,7 @@ CREATE TABLE t_bbs (
     bbs_title VARCHAR(255) NOT NULL,
     bbs_content TEXT NOT NULL,
     bbs_author VARCHAR(255) NOT NULL,
+    bbs_flag INT DEFAULT 1,
     create_time TIMESTAMP NOT NULL default current_timestamp comment '创建时间',
     update_time timestamp not null default current_timestamp on update current_timestamp comment '修改时间',
     PRIMARY KEY (id)
@@ -83,6 +88,7 @@ CREATE TABLE t_news (
     news_title VARCHAR(255) NOT NULL,
     news_content TEXT NOT NULL,
     news_author VARCHAR(255) NOT NULL,
+    news_flag INT DEFAULT 1,
     create_time TIMESTAMP NOT NULL default current_timestamp comment '创建时间',
     update_time timestamp not null default current_timestamp on update current_timestamp comment '修改时间',
     PRIMARY KEY (id)
