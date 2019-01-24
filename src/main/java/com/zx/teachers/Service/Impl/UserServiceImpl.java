@@ -8,6 +8,7 @@ import org.springframework.beans.factory.BeanIsAbstractException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -37,9 +38,12 @@ public class UserServiceImpl implements UserService {
     @Override
     public User modifyUser(User user) {
         int userId = user.getId();
+
         User oldUser = userRepository.findById(userId);
+        Date temp = user.getCreateTime();
         BeanUtils.copyProperties(user, oldUser);
         oldUser.setId(userId);
+        oldUser.setCreateTime(temp);
         userRepository.save(user);
         return userRepository.findById(userId);
     }
