@@ -3,6 +3,8 @@ package com.zx.teachers.Service.Impl;
 import com.zx.teachers.Entity.User;
 import com.zx.teachers.Repository.UserRepository;
 import com.zx.teachers.Service.UserService;
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.BeanIsAbstractException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -36,10 +38,10 @@ public class UserServiceImpl implements UserService {
     public User modifyUser(User user) {
         int userId = user.getId();
         User oldUser = userRepository.findById(userId);
-        oldUser.setUserTitle(user.getUserTitle());
-        userRepository.save(oldUser);
+        BeanUtils.copyProperties(user, oldUser);
+        oldUser.setId(userId);
+        userRepository.save(user);
         return userRepository.findById(userId);
-//        return null;
     }
 
     @Override

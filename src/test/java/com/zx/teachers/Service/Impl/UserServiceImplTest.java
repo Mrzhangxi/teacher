@@ -51,11 +51,10 @@ public class UserServiceImplTest {
 
     @Test
     public void testDModifyUser() {
-        User user = new User();
-        user.setId(1);
-        user.setUserTitle("教授");
-        User user1 = userService.modifyUser(user);
-        System.out.println(user1);
+        User user = userService.getUserByID(1);
+        user.setUserNickname("我现在是测试");
+        user.setUserTitle("高级讲师");
+        System.out.println(userService.modifyUser(user));
     }
 
     @Test

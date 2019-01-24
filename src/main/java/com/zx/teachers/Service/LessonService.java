@@ -34,17 +34,17 @@ public interface LessonService {
     List<Lesson> getLessonAll();
 
     /**
-     * 获取所有状态为有效的课程
+     * 获取不同状态的课程
      * @return
      */
-    List<Lesson> getEffLessonAll();
+    List<Lesson> getEffLessonAll(int flag);
 
     /**
      * 修改课程信息
      * @param lesson
      * @return
      */
-    Lesson modefyLesson(Lesson lesson);
+    Lesson modifyLesson(Lesson lesson);
 
     /**
      * 删除课程，（将课程状态设置为删除，并非真正删除数据）
