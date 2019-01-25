@@ -39,4 +39,10 @@ $(function() {
             break;
         }
     }
+
+
 });
+
+$(document).ready(function () {
+    alert("hhhh");
+})

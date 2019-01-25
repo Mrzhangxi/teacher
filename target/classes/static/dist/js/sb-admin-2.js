@@ -45,3 +45,30 @@ $(function() {
         }
     }
 });
+
+$(document).ready(function () {
+    // $.ajax({
+    //     type:"GET",
+    //     url:" https://api.passport.xxx.com/checkNickname?username="+mylogin.username+"&token="+mylogin.token+"&nickname="+nickname+"&format=jsonp&cb=?",
+    //     dataType:"json",
+    //     success:function(data){
+    //         if(data.errorCode==0){
+    //             $("#nickname").val(mylogin.nickname);
+    //         }else{
+    //             $("#nickname").val("用户");
+    //         }
+    //     },
+    //     error:function(jqXHR){
+    //         console.log("Error: "+jqXHR.status);
+    //     }
+    // });
+    $.ajax({
+        type:"GET",
+        url:"http://localhost:8080/user/all",
+        dataType:"json",
+        success:function (data) {
+            alert(data)
+        }
+    })
+})
+
