@@ -61,24 +61,7 @@
     </div>
     <!-- /#wrapper -->
 
-    <!-- jQuery -->
-    <script src="../vendor/jquery/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
-
-    <!-- DataTables JavaScript -->
-    <script src="../vendor/datatables/js/jquery.dataTables.min.js"></script>
-    <script src="../vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
-    <script src="../vendor/datatables-responsive/dataTables.responsive.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="../dist/js/sb-admin-2.js?flag=3"></script>
-
-    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+   <div th:insert="/admin/footjs :: foot"></div>
     <script>
     $(document).ready(function() {
         $('#dataTables-example').DataTable({
@@ -109,13 +92,13 @@
                     sortable: false,
                     render: function(data, type, row){
                         // var htms = '<a href="index.html?id=' + row.id + '"><i class="glyphicon glyphicon-eye-open"></i></a>'
-                        var htms = '<a href="#?id=' + row.id + '"title="详情">' +
+                        var htms = '<a href="/userdetail?id=' + row.id + '"title="详情">' +
                             '<i class="glyphicon glyphicon-eye-open"></i> ' +
-                            '</a>'+
-                            '<a href="#id?=' + row.id + '" title="修改">' +
+                            '</a> &nbsp;'+
+                            '<a href="/useredit?id=' + row.id + '" title="修改">' +
                             '<i class="glyphicon glyphicon-pencil"></i> ' +
-                            '</a>'+
-                            '<a href="#id?=' + row.id + '"  title="删除">' +
+                            '</a> &nbsp;'+
+                            '<a href="/delete?id=' + row.id + '"  title="删除">' +
                             '<i class="glyphicon glyphicon-trash text-danger"></i> ' +
                             '</a>';
                         return htms;

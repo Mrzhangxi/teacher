@@ -1,7 +1,11 @@
 package com.zx.teachers.Controller;
 
+import com.zx.teachers.Convertor.UserConvertor;
 import com.zx.teachers.Entity.User;
+import com.zx.teachers.ResultVO.UserVO;
 import com.zx.teachers.Service.UserService;
+import com.zx.teachers.enums.UserEnum;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
@@ -11,11 +15,13 @@ import org.springframework.web.context.request.WebRequest;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 @Controller
 @RequestMapping("/user")
+@Slf4j
 public class UserController {
 
     @Autowired
@@ -33,9 +39,14 @@ public class UserController {
      */
     @RequestMapping("/all")
     @ResponseBody
-    public List<User> getAllUser(){
-        List<User> users = userService.getAllUserByUserType(1);
-        return users;
+    public List<UserVO> getAllUser(){
+        log.info("getAllUser执行");
+        List<User> users = userService.getAllUserByUserType(UserEnum.TEACHER.getCode());
+        List<UserVO> userVOS = new ArrayList<UserVO>();
+        for(User user : users) {
+            userVOS.add(UserConvertor.userToUserVO(user));
+        }
+        return userVOS;
     }
 
     /**
@@ -45,8 +56,9 @@ public class UserController {
      */
     @RequestMapping("/getuser")
     @ResponseBody
-    public User getUserByID(@RequestParam(value = "id", required = true) Integer id) {
-        return userService.getUserByID(id);
+    public UserVO getUserByID(@RequestParam(value = "id", required = true) Integer id) {
+        log.info("GetUserByID执行");
+        return UserConvertor.userToUserVO(userService.getUserByID(id));
     }
 
     /**
@@ -73,12 +85,14 @@ public class UserController {
 
     /**
      * 修改User
-     * @param user
+     * @param userVO
      * @return
      */
     @RequestMapping(value = "/modify",method = RequestMethod.POST)
     @ResponseBody
-    public User modifyUser(User user) {
+    public User modifyUser(UserVO userVO) {
+        System.out.println(userVO);
+        User user = UserConvertor.userVOToUser(userVO);
         user.setUpdateTime(new Date());
         return userService.modifyUser(user);
     }
