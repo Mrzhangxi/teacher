@@ -46,29 +46,24 @@ $(function() {
     }
 });
 
-$(document).ready(function () {
-    // $.ajax({
-    //     type:"GET",
-    //     url:" https://api.passport.xxx.com/checkNickname?username="+mylogin.username+"&token="+mylogin.token+"&nickname="+nickname+"&format=jsonp&cb=?",
-    //     dataType:"json",
-    //     success:function(data){
-    //         if(data.errorCode==0){
-    //             $("#nickname").val(mylogin.nickname);
-    //         }else{
-    //             $("#nickname").val("用户");
-    //         }
-    //     },
-    //     error:function(jqXHR){
-    //         console.log("Error: "+jqXHR.status);
-    //     }
-    // });
-    $.ajax({
-        type:"GET",
-        url:"http://localhost:8080/user/all",
-        dataType:"json",
-        success:function (data) {
-            alert(data)
-        }
-    })
-})
+// $(document).ready(function () {
+//     $.ajax({
+//         type:"GET",
+//         url:"http://localhost:8080/user/all",
+//         dataType:"json",
+//         success:function (data) {
+//             $("#dataTables-tbody").html("");
+//             for (var i=0; i<data.length; i++){
+//                 str1 = "<tr>" +
+//                     "<td>" + data[i].userName + "</td>" +
+//                     "<td>" + data[i].userNickname + "</td>" +
+//                     "<td>" + data[i].userTitle + "</td>" +
+//                     "<td>" + data[i].createTime + "</td>" +
+//                     "</tr>";
+//                 $("#dataTables-tbody").append(str1);
+//
+//             }
+//         }
+//     })
+// })
 
