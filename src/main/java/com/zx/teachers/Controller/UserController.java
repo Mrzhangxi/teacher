@@ -73,7 +73,12 @@ public class UserController {
     public String createUser(UserVO userVO, @RequestParam(value = "newuserimg", required = false) MultipartFile file) {
 
         //处理图片
-        String userImgPath = FileUtils.saveUserImg(file);
+        String userImgPath = null;
+        try {
+            userImgPath = FileUtils.saveUserImg(file);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         userVO.setUserImages(userImgPath);
         System.out.println(userVO);

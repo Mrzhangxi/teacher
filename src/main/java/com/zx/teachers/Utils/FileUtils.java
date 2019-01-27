@@ -11,7 +11,7 @@ import java.util.Random;
 @Slf4j
 public class FileUtils {
 
-    public static String saveUserImg(MultipartFile file) {
+    public static String saveUserImg(MultipartFile file) throws IOException {
 
         File outfile = null;
         try {
@@ -29,8 +29,9 @@ public class FileUtils {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        return outfile.getPath();
+        String[] strings = outfile.getCanonicalPath().split("static");
+        return outfile.getCanonicalPath().split("static")[1];
+//        return outfile.getPath();
     }
 
     /**
@@ -39,7 +40,7 @@ public class FileUtils {
      */
     public static File createRandomPath() throws FileNotFoundException {
 
-        File file  = new File(ResourceUtils.getURL("classpath:").getPath() + "/teacherFiles/Imges");
+        File file  = new File(ResourceUtils.getURL("classpath:").getPath() + "/static/teacherFiles/Imges");
         if (!file.exists()){
             file.mkdirs();
         }
