@@ -4,6 +4,7 @@ import com.zx.teachers.Convertor.UserConvertor;
 import com.zx.teachers.Entity.User;
 import com.zx.teachers.ResultVO.UserVO;
 import com.zx.teachers.Service.UserService;
+import com.zx.teachers.Utils.FileUtils;
 import com.zx.teachers.enums.UserEnum;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +13,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.WebRequest;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -67,9 +70,18 @@ public class UserController {
      * @return
      */
     @RequestMapping(value = "/create", method = RequestMethod.POST)
-    @ResponseBody
-    public User createUser(User user) {
-        return userService.createNewUser(user);
+    public String createUser(UserVO userVO, @RequestParam(value = "newuserimg", required = false) MultipartFile file) {
+
+        //处理图片
+        String userImgPath = FileUtils.saveUserImg(file);
+
+        userVO.setUserImages(userImgPath);
+        System.out.println(userVO);
+        userVO.setUserType("教师");//设置默认值
+        userVO.setUserFlag("正常");//设置默认值
+        User user = UserConvertor.userVOToUser(userVO);
+        userService.createNewUser(user);
+        return "admin/success";
     }
 
     /**
@@ -89,20 +101,21 @@ public class UserController {
      * @return
      */
     @RequestMapping(value = "/modify",method = RequestMethod.POST)
-    @ResponseBody
-    public User modifyUser(UserVO userVO) {
+    public String modifyUser(UserVO userVO) {
         System.out.println(userVO);
         User user = UserConvertor.userVOToUser(userVO);
         user.setUpdateTime(new Date());
-        return userService.modifyUser(user);
+        userService.modifyUser(user);
+        return "admin/success";
     }
 
     @RequestMapping("/delete")
-    @ResponseBody
-    public User deleteUser(Integer userID) {
+//    @ResponseBody
+    public String deleteUser(@RequestParam(value = "id", required = true) Integer userID) {
         User user = userService.getUserByID(userID);
         user.setUpdateTime(new Date());
-        return userService.deleteUser(user);
+        userService.deleteUser(user);
+        return "admin/success";
     }
 
 

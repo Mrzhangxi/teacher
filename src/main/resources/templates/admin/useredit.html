@@ -40,11 +40,32 @@
                                             <input id="userNickname" name="userNickname" class="form-control">
                                             <p class="help-block">Example block-level help text here.</p>
                                             <label>生日</label>
-                                            <input id="userBirthday" name="userBirthday" class="form-control">
+                                            <input type="date" id="userBirthday" name="userBirthday" class="form-control">
                                             <p class="help-block">Example block-level help text here.</p>
                                             <label>类型</label>
                                             <input id="userType" name="userType" class="form-control" readonly>
                                             <p class="help-block">Example block-level help text here.</p>
+                                            <label>职称</label>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="userTitle" id="userTitle1" value="助教">助教
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="userTitle" id="userTitle2" value="讲师">讲师
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="userTitle" id="userTitle3" value="副教授">副教授
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="userTitle" id="userTitle4" value="教授">教授
+                                                </label>
+                                            </div>
                                             <label>职称</label>
                                             <input id="userTitle" name="userTitle" class="form-control">
                                             <p class="help-block">Example block-level help text here.</p>
@@ -52,10 +73,10 @@
                                             <input id="userFlag" name="userFlag" class="form-control">
                                             <p class="help-block">Example block-level help text here.</p>
                                             <label>创建时间</label>
-                                            <input id="createTime" name="createTime" class="form-control">
+                                            <input id="createTime" name="createTime" class="form-control" readonly>
                                             <p class="help-block">Example block-level help text here.</p>
                                             <label>更新时间</label>
-                                            <input id="updateTime" name="updateTime" class="form-control">
+                                            <input id="updateTime" name="updateTime" class="form-control" readonly>
                                             <p class="help-block">Example block-level help text here.</p>
 
                                         </div>
@@ -99,6 +120,15 @@
                     $("#userNickname").val(data.userNickname);
                     $("#userBirthday").val(data.userBirthday);
                     $("#userType").val(data.userType);
+                    if (data.userTitle == "助教") {
+                        $("#userTitle1").attr("checked",'checked')
+                    } else if (data.userTitle == "讲师") {
+                        $("#userTitle2").attr("checked",'checked')
+                    } else if (data.userTitle == "副教授") {
+                        $("#userTitle3").attr("checked",'checked')
+                    } else if (data.userTitle == "教授") {
+                        $("#userTitle4").attr("checked",'checked')
+                    }
                     $("#userTitle").val(data.userTitle);
                     $("#userFlag").val(data.userFlag);
                     $("#createTime").val(data.createTime);

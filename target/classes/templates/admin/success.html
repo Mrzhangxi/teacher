@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:insert="/admin/head :: head"></head>
+<body>
+
+<div id="wrapper">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0" th:insert="/admin/menu :: menu">
+    </nav>
+
+    <div id="page-wrapper">
+        操作成功，<a href="/">跳转主页</a>
+
+    </div>
+    <!-- /#page-wrapper -->
+</div>
+
+
+<div th:insert="/admin/footjs :: foot"></div>
+</body>
+</html>

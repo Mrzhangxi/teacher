@@ -38,4 +38,19 @@ public class MainController {
         modelAndView.setViewName("admin/useredit");
         return modelAndView;
     }
+
+    @RequestMapping("/userdetail")
+    public ModelAndView userDetail(@RequestParam(value = "id", required = true) Integer id) {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("userId", id);
+        modelAndView.setViewName("admin/userdetail");
+        return modelAndView;
+    }
+
+    @RequestMapping("/usercreate")
+    public ModelAndView userCreate() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("admin/usercreate");
+        return modelAndView;
+    }
 }

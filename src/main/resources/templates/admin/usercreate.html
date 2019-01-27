@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:insert="/admin/head :: head"></head>
+<body>
+
+<div id="wrapper">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0" th:insert="/admin/menu :: menu">
+    </nav>
+
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">注册用户</h1>
+            </div>
+            <!-- /.col-lg-12 -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            填写完成后请提交保存
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <form role="form" id="userform" action="/user/create" method="post" enctype="multipart/form-data">
+                                        <div class="form-group">
+                                            <!--<input type="hidden" id="hiddenUserID"  th:value="${userId}">-->
+                                            <!--<label>ID</label>-->
+                                            <!--<input id="id" name="id" class="form-control" readonly>-->
+                                            <!--<p class="help-block">Example block-level help text here.</p>-->
+                                            <label>账号</label>
+                                            <input id="userName" name="userName" class="form-control">
+                                            <p class="help-block">必填项</p>
+                                            <label>密码</label>
+                                            <input type="password" id="userPwd" name="userPwd" class="form-control">
+                                            <p class="help-block">必填项</p>
+                                            <label>名称</label>
+                                            <input id="userNickname" name="userNickname" class="form-control">
+                                            <p class="help-block">必填项</p>
+                                            <label>生日</label>
+                                            <input type="date" id="userBirthday" name="userBirthday" class="form-control">
+                                            <p class="help-block">Example block-level help text here.</p>
+                                            <!--<label>类型</label>-->
+                                            <!--<input id="userType" name="userType" class="form-control" readonly>-->
+                                            <!--<p class="help-block">Example block-level help text here.</p>-->
+                                            <div class="form-group">
+                                                <label>职称</label>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="userTitle" id="userTitle1" value="助教" checked>助教
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="userTitle" id="userTitle2" value="讲师">讲师
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="userTitle" id="userTitle3" value="副教授">副教授
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="userTitle" id="userTitle4" value="教授">教授
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <!--<label>职称</label>-->
+                                            <!--<input id="userTitle" name="userTitle" class="form-control">-->
+                                            <!--<p class="help-block">Example block-level help text here.</p>-->
+                                            <!--<label>状态</label>-->
+                                            <!--<input id="userFlag" name="userFlag" class="form-control">-->
+                                            <!--<p class="help-block">Example block-level help text here.</p>-->
+                                            <!--<label>创建时间</label>-->
+                                            <!--<input id="createTime" name="createTime" class="form-control" readonly>-->
+                                            <!--<p class="help-block">Example block-level help text here.</p>-->
+                                            <!--<label>更新时间</label>-->
+                                            <!--<input id="updateTime" name="updateTime" class="form-control" readonly>-->
+                                            <!--<p class="help-block">Example block-level help text here.</p>-->
+                                        </div>
+                                        <div class="form-group">
+                                            <label>选择头像</label>
+                                            <input type="file" id="newuserimg" name="newuserimg" accept="image/*">
+                                        </div>
+
+                                        <button type="submit" class="btn btn-default">保存</button>
+                                        <button type="reset" class="btn btn-default">重置</button>
+                                    </form>
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </div>
+    </div>
+    <!-- /#page-wrapper -->
+</div>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script type="text/javascript" >
+        $(document).ready(function () {
+
+            // var userId = $("#hiddenUserID").valueOf().val()
+            // $.ajax({
+            //     type: "GET",
+            //     url: "/user/getuser?id=" + userId,
+            //     dataType: "json",
+            //     success: function (data) {
+            //         $("#id").val(data.id);
+            //         $("#userName").val(data.userName);
+            //         $("#userPwd").val(data.userPwd);
+            //         $("#userNickname").val(data.userNickname);
+            //         $("#userBirthday").val(data.userBirthday);
+            //         $("#userType").val(data.userType);
+            //         $("#userTitle").val(data.userTitle);
+            //         $("#userFlag").val(data.userFlag);
+            //         $("#createTime").val(data.createTime);
+            //         $("#updateTime").val(data.updateTime);
+            //     }
+            // })
+        })
+    </script>
+
+    <div th:insert="/admin/footjs :: foot"></div>
+</body>
+</html>

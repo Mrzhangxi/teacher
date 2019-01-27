@@ -34,8 +34,10 @@
                                         <th>ID</th>
                                         <th>用户名</th>
                                         <th>昵称</th>
+                                        <th>生日</th>
                                         <th>职称</th>
                                         <th>创建时间</th>
+                                        <th>状态</th>
                                         <th>操作</th>
                                         <!--<th>删除</th>-->
                                     </tr>
@@ -80,9 +82,9 @@
                 {"data": "userBirthday"},
                 // {"data": "userType"},
                 {"data": "userTitle"},
-                // {"data": "userFlag"},
                 // {"data": "createTime"},
-                // {"data": "updateTime"},
+                {"data": "updateTime"},
+                {"data": "userFlag"},
                 {"data": ""}
             ],
             "columnDefs": [
@@ -98,7 +100,7 @@
                             '<a href="/useredit?id=' + row.id + '" title="修改">' +
                             '<i class="glyphicon glyphicon-pencil"></i> ' +
                             '</a> &nbsp;'+
-                            '<a href="/delete?id=' + row.id + '"  title="删除">' +
+                            '<a href="/user/delete?id=' + row.id + '"  title="删除">' +
                             '<i class="glyphicon glyphicon-trash text-danger"></i> ' +
                             '</a>';
                         return htms;

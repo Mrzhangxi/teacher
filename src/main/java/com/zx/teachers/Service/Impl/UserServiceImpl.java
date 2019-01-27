@@ -40,10 +40,12 @@ public class UserServiceImpl implements UserService {
         int userId = user.getId();
 
         User oldUser = userRepository.findById(userId);
-        Date temp = user.getCreateTime();
+        Date tempCreate = user.getCreateTime();
+        Date tempBirthday = user.getUserBirthday();
         BeanUtils.copyProperties(user, oldUser);
         oldUser.setId(userId);
-        oldUser.setCreateTime(temp);
+        oldUser.setCreateTime(tempCreate);
+        oldUser.setUserBirthday(tempBirthday);
         userRepository.save(user);
         return userRepository.findById(userId);
     }

@@ -5,6 +5,8 @@ import com.zx.teachers.ResultVO.UserVO;
 import com.zx.teachers.Utils.DateUtils;
 import com.zx.teachers.enums.UserEnum;
 
+import java.util.Date;
+
 public class UserConvertor {
 
     /**
@@ -45,10 +47,18 @@ public class UserConvertor {
             user.setUserImages(userVO.getUserImages());
         }
         user.setUserType(UserEnum.getUserCode(userVO.getUserType()).getCode());
-        user.setUserTitle(user.getUserTitle());
+        user.setUserTitle(userVO.getUserTitle());
         user.setUserBirthday(DateUtils.stringToDate(userVO.getUserBirthday()));
-        user.setCreateTime(DateUtils.stringToDate(userVO.getCreateTime()));
-        user.setUpdateTime(DateUtils.stringToDate(userVO.getUpdateTime()));
+        if (userVO.getCreateTime() == null || "".equals(userVO.getCreateTime())){
+            user.setCreateTime(new Date());
+        } else {
+            user.setCreateTime(DateUtils.stringToDate(userVO.getCreateTime()));
+        }
+        if (userVO.getUpdateTime() == null || "".equals(userVO.getUpdateTime())){
+            user.setUpdateTime(new Date());
+        } else {
+            user.setUpdateTime(DateUtils.stringToDate(userVO.getUpdateTime()));
+        }
         user.setUserFlag(UserEnum.getUserCode(userVO.getUserFlag()).getCode());
         System.out.println(user);
         return user;
