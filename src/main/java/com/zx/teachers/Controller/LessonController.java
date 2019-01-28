@@ -4,6 +4,8 @@ import com.zx.teachers.Convertor.LessonConvertor;
 import com.zx.teachers.Entity.Lesson;
 import com.zx.teachers.ResultVO.LessonVO;
 import com.zx.teachers.Service.LessonService;
+import com.zx.teachers.Utils.DateUtils;
+import com.zx.teachers.Utils.FileUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,8 +13,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -25,14 +30,26 @@ public class LessonController {
 
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     @ResponseBody
-    public Lesson create(Lesson lesson) {
+    public Lesson create(LessonVO lessonVO,  @RequestParam(value = "lessonimg", required = false) MultipartFile file) {
+
+        String lessonImgPath = null;
+        try {
+            lessonImgPath = FileUtils.saveUserImg(file);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        lessonVO.setLessonImage(lessonImgPath );
+        lessonVO.setCreateTime(DateUtils.dateToString(new Date()));
+        lessonVO.setUpdateTime(DateUtils.dateToString(new Date()));
+        Lesson lesson = LessonConvertor.lessonVOToLesson(lessonVO);
         return lessonService.createNewLesson(lesson);
     }
 
     @RequestMapping("/getbyid")
     @ResponseBody
-    public Lesson getByID(@RequestParam(value = "id", required = true) Integer Id){
-        return lessonService.getLessonByID(Id);
+    public LessonVO getByID(@RequestParam(value = "id", required = true) Integer Id){
+
+        return LessonConvertor.lessonToLesonVO(lessonService.getLessonByID(Id));
     }
 
     @RequestMapping("/getbyname")
@@ -60,9 +77,17 @@ public class LessonController {
     }
 
     @RequestMapping("/modify")
-    @ResponseBody
-    public Lesson modefyLesson(Lesson lesson) {
-        return lessonService.modifyLesson(lesson);
+    public String modefyLesson(LessonVO lessonVO, @RequestParam(value = "lessonimg", required = false) MultipartFile file) {
+        String lessonImgPath = null;
+        try {
+            lessonImgPath = FileUtils.saveUserImg(file);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        lessonVO.setLessonImage(lessonImgPath );
+        lessonVO.setUpdateTime(DateUtils.dateToString(new Date()));
+        lessonService.modifyLesson(LessonConvertor.lessonVOToLesson(lessonVO));
+        return "admin/success";
     }
 
     @RequestMapping("/delete")

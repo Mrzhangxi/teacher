@@ -15,7 +15,7 @@ public class LessonConvertor {
         lessonVO.setLessonName(lesson.getLessonName());
         lessonVO.setLessonDescribe(lesson.getLessonDescribe());
         lessonVO.setLessonImage(lesson.getLessonImage());
-        lessonVO.setLessonClassHour(String.valueOf(lesson.getLessonClassHour()));
+        lessonVO.setLessonClassHour(lesson.getLessonClassHour());
         lessonVO.setLessonFlag(LessonEnum.getLessonFlag(lesson.getLessonFlag()).getMsg());
         lessonVO.setUpdateTime(DateUtils.dateToString(lesson.getUpdateTime()));
         lessonVO.setCreateTime(DateUtils.dateToString(lesson.getCreateTime()));
@@ -32,7 +32,7 @@ public class LessonConvertor {
         } else {
             lesson.setLessonImage("/");
         }
-        lesson.setLessonClassHour(Integer.parseInt(lessonVO.getLessonClassHour()));
+        lesson.setLessonClassHour(lessonVO.getLessonClassHour());
         lesson.setLessonFlag(LessonEnum.getLessonCode(lessonVO.getLessonFlag()).getCode());
         lesson.setUpdateTime(DateUtils.stringToDate(lessonVO.getUpdateTime()));
         lesson.setCreateTime(DateUtils.stringToDate(lessonVO.getCreateTime()));

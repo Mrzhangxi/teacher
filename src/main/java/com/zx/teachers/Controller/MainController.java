@@ -65,18 +65,30 @@ public class MainController {
     @RequestMapping("/lessonedit")
     public ModelAndView lessonEdit(@RequestParam(value = "id", required = true) Integer id){
         log.info("lessonedit执行");
-        return null;
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("admin/lessonedit");
+        modelAndView.addObject("lessonId", id);
+        return modelAndView;
     }
 
     @RequestMapping("/lessondetail")
     public ModelAndView lessonDetail(@RequestParam(value = "id", required = true) Integer id) {
         log.info("lessondetail执行");
-        return null;
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("lessonId", id);
+        modelAndView.setViewName("admin/lessondetail");
+        return modelAndView;
     }
 
     @RequestMapping("/lessoncreate")
     public ModelAndView lessonCreate(){
-        return null;
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("admin/lessoncreate");
+        return modelAndView;
     }
 
+    @RequestMapping("/uploadlesson")
+    public String uploadLesson() {
+        return "admin/uploadlesson";
+    }
 }

@@ -2,23 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84e5c617-9b75-4e16-9087-cd719df9167e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zx/teachers/Convertor/LessonConvertor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zx/teachers/ResultVO/LessonVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/lessontables.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zx/teachers/Entity/Video.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zx/teachers/Repository/VideoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zx/teachers/Service/Impl/VideoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zx/teachers/Service/VideoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/lessoncreate.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/lessondetail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/lessonedit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/uploadlesson.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/zx/teachers/Repository/VideoRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zx/teachers/Controller/LessonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zx/teachers/Controller/LessonController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zx/teachers/Controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zx/teachers/Controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zx/teachers/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zx/teachers/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zx/teachers/Convertor/LessonConvertor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zx/teachers/Convertor/LessonConvertor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zx/teachers/ResultVO/LessonVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zx/teachers/ResultVO/LessonVO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zx/teachers/enums/LessonEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zx/teachers/enums/LessonEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/useredit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/useredit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zx/teachers/Controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zx/teachers/Controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/useredit.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/useredit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/css/userInfo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/dist/css/userInfo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zx/teachers/Controller/LessonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zx/teachers/Controller/LessonController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zx/teachers/Controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zx/teachers/Controller/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zx/teachers/Convertor/LessonConvertor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zx/teachers/Convertor/LessonConvertor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zx/teachers/ResultVO/LessonVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zx/teachers/ResultVO/LessonVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zx/teachers/enums/LessonEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zx/teachers/enums/LessonEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/css/userInfo.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/dist/css/userInfo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/menu.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/teacher.sql" beforeDir="false" afterPath="$PROJECT_DIR$/teacher.sql" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,102 +38,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/Controller/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="45" column="33" lean-forward="true" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/useredit.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="26" column="132" selection-start-line="26" selection-start-column="132" selection-end-line="26" selection-end-column="132" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/lessontables.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="90" column="45" selection-start-line="90" selection-start-column="45" selection-end-line="90" selection-end-column="45" />
-              <folding>
-                <element signature="e#86#92#1" expanded="true" />
-                <element signature="e#175#181#1" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/Controller/LessonController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/Controller/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="78" column="20" lean-forward="true" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
+            <state relative-caret-position="237">
+              <caret line="79" column="28" lean-forward="true" selection-start-line="79" selection-start-column="28" selection-end-line="79" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#552#553#0" expanded="true" />
-                <element signature="e#594#595#0" expanded="true" />
-                <element signature="e#1582#1583#0" expanded="true" />
-                <element signature="e#1606#1607#0" expanded="true" />
-                <element signature="e#2062#2063#0" expanded="true" />
-                <element signature="e#2088#2089#0" expanded="true" />
+                <element signature="e#485#486#0" expanded="true" />
+                <element signature="e#521#522#0" expanded="true" />
+                <element signature="e#635#636#0" expanded="true" />
+                <element signature="e#677#678#0" expanded="true" />
+                <element signature="e#1665#1666#0" expanded="true" />
+                <element signature="e#1708#1709#0" expanded="true" />
+                <element signature="e#2727#2728#0" expanded="true" />
+                <element signature="e#2751#2752#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/menu.html">
+      <file leaf-file-name="uploadlesson.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/uploadlesson.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="262" column="45" lean-forward="true" selection-start-line="262" selection-start-column="45" selection-end-line="262" selection-end-column="45" />
+            <state relative-caret-position="378">
+              <caret line="14" column="66" selection-start-line="14" selection-start-column="66" selection-end-line="14" selection-end-column="66" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/Convertor/LessonConvertor.java">
+      <file leaf-file-name="Video.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/Entity/Video.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/Convertor/UserConvertor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1377">
-              <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
+            <state relative-caret-position="347">
+              <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -129,11 +79,85 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/usercreate.html">
+      <file leaf-file-name="VideoRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/Repository/VideoRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1678">
-              <caret line="85" column="95" selection-start-line="85" selection-start-column="95" selection-end-line="85" selection-end-column="95" />
+            <state relative-caret-position="189">
+              <caret line="7" column="19" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VideoRepositoryTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/zx/teachers/Repository/VideoRepositoryTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#366#367#0" expanded="true" />
+                <element signature="e#402#403#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VideoService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/Service/VideoService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VideoServiceImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/Service/Impl/VideoServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="313">
+              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#248#249#0" expanded="true" />
+                <element signature="e#275#276#0" expanded="true" />
+                <element signature="e#334#335#0" expanded="true" />
+                <element signature="e#361#362#0" expanded="true" />
+                <element signature="e#420#421#0" expanded="true" />
+                <element signature="e#447#448#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/Repository/UserRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SelectLesson.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/Entity/SelectLesson.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/Entity/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="13" column="4" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -143,11 +167,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit4 Test Class" />
-        <option value="Interface" />
         <option value="Enum" />
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JUnit4 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -170,12 +194,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/com/zx/teachers/Repository/UserRepositoryTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zx/teachers/Repository/UserRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zx/teachers/Entity/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zx/teachers/Entity/Bbs.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zx/teachers/Entity/Lesson.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zx/teachers/Entity/News.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zx/teachers/Entity/SelectLesson.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zx/teachers/Repository/LessonRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zx/teachers/Service/LessonService.java" />
@@ -191,7 +209,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/admin/head1.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/menu.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/admin/footjs.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/admin/tables.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/zx/teachers/Utils/DateUtils.java" />
@@ -201,7 +218,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/zx/teachers/enums/UserEnum.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zx/teachers/Service/Impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/admin/success.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/dist/css/userInfo.css" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/admin/head.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/zx/teachers/Convertor/UserConvertor.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/admin/usertables.html" />
@@ -212,20 +228,40 @@
         <option value="$PROJECT_DIR$/src/main/java/com/zx/teachers/Controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/admin/useredit.html" />
         <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zx/teachers/ResultVO/LessonVO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zx/teachers/enums/LessonEnum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zx/teachers/Convertor/LessonConvertor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zx/teachers/Controller/LessonController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/admin/lessontables.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zx/teachers/ResultVO/LessonVO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zx/teachers/Convertor/LessonConvertor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zx/teachers/enums/LessonEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/lessonedit.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/lessoncreate.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/dist/css/userInfo.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/lessondetail.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zx/teachers/Controller/LessonController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/menu.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/zx/teachers/Controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/uploadlesson.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zx/teachers/Repository/VideoRepository.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/zx/teachers/Repository/VideoRepositoryTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zx/teachers/Entity/Video.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zx/teachers/Service/VideoService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zx/teachers/Service/Impl/VideoServiceImpl.java" />
       </list>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="784" />
+    <option name="x" value="376" />
+    <option name="y" value="172" />
+    <option name="width" value="974" />
+    <option name="height" value="1087" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -239,38 +275,38 @@
         <subPane>
           <expand>
             <path>
-              <item name="teacher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="teacher" type="462c0819:PsiDirectoryNode" />
+              <item name="teachers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teachers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="teacher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="teacher" type="462c0819:PsiDirectoryNode" />
+              <item name="teachers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teachers" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="teacher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="teacher" type="462c0819:PsiDirectoryNode" />
+              <item name="teachers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teachers" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="teacher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="teacher" type="462c0819:PsiDirectoryNode" />
+              <item name="teachers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teachers" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="teacher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="teacher" type="462c0819:PsiDirectoryNode" />
+              <item name="teachers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teachers" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="teachers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="teacher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="teacher" type="462c0819:PsiDirectoryNode" />
+              <item name="teachers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teachers" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -278,17 +314,8 @@
               <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="teacher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="teacher" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="teachers" type="b2602c69:ProjectViewProjectNode" />
               <item name="teachers" type="462c0819:PsiDirectoryNode" />
-              <item name="Convertor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="teacher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="teacher" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -296,8 +323,8 @@
               <item name="Entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="teacher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="teacher" type="462c0819:PsiDirectoryNode" />
+              <item name="teachers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teachers" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -305,37 +332,113 @@
               <item name="enums" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="teacher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="teacher" type="462c0819:PsiDirectoryNode" />
+              <item name="teachers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teachers" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="teachers" type="462c0819:PsiDirectoryNode" />
-              <item name="ResultVO" type="462c0819:PsiDirectoryNode" />
+              <item name="Repository" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="teacher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="teacher" type="462c0819:PsiDirectoryNode" />
+              <item name="teachers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teachers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="teachers" type="462c0819:PsiDirectoryNode" />
+              <item name="Service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="teachers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teachers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="teachers" type="462c0819:PsiDirectoryNode" />
+              <item name="Service" type="462c0819:PsiDirectoryNode" />
+              <item name="Impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="teachers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teachers" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="teacher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="teacher" type="462c0819:PsiDirectoryNode" />
+              <item name="teachers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teachers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="teachers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teachers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="teachers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teachers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="teachers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teachers" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="teacher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="teacher" type="462c0819:PsiDirectoryNode" />
+              <item name="teachers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teachers" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="teachers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teachers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="teachers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teachers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="teachers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teachers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="teachers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="teachers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teachers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="teachers" type="462c0819:PsiDirectoryNode" />
+              <item name="Repository" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -343,6 +446,7 @@
       </pane>
       <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -365,16 +469,17 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.zx.teachers.Repository" />
       <recent name="com.zx.teachers.Service.Impl" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\teachers\src\main\resources\templates\admin" />
       <recent name="E:\teacher\src\main\resources\templates\admin" />
       <recent name="G:\teachers\src\main\resources\static\dist\js" />
       <recent name="G:\teachers\src\main\resources\static\dist\css" />
-      <recent name="G:\teachers\src\main\resources\templates\admin" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -389,25 +494,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.TeachersApplication">
-    <configuration name="LessonServiceImplTest.testCgetsByname" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="teachers" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zx.teachers.Service.Impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.zx.teachers.Service.Impl" />
-      <option name="MAIN_CLASS_NAME" value="com.zx.teachers.Service.Impl.LessonServiceImplTest" />
-      <option name="METHOD_NAME" value="testCgetsByname" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.VideoRepositoryTest.getall">
     <configuration name="LessonServiceImplTest.testDgetEffLesson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="teachers" />
       <extension name="coverage">
@@ -416,15 +503,20 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.zx.teachers.Service.Impl" />
       <option name="MAIN_CLASS_NAME" value="com.zx.teachers.Service.Impl.LessonServiceImplTest" />
       <option name="METHOD_NAME" value="testDgetEffLesson" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration name="LessonServiceImplTest.testEModifyLesson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="teachers" />
@@ -434,15 +526,20 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.zx.teachers.Service.Impl" />
       <option name="MAIN_CLASS_NAME" value="com.zx.teachers.Service.Impl.LessonServiceImplTest" />
       <option name="METHOD_NAME" value="testEModifyLesson" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration name="LessonServiceImplTest.testFDeleteLesson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="teachers" />
@@ -452,15 +549,20 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.zx.teachers.Service.Impl" />
       <option name="MAIN_CLASS_NAME" value="com.zx.teachers.Service.Impl.LessonServiceImplTest" />
       <option name="METHOD_NAME" value="testFDeleteLesson" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration name="UserServiceImplTest.testDModifyUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="teachers" />
@@ -470,38 +572,63 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.zx.teachers.Service.Impl" />
       <option name="MAIN_CLASS_NAME" value="com.zx.teachers.Service.Impl.UserServiceImplTest" />
       <option name="METHOD_NAME" value="testDModifyUser" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="VideoRepositoryTest.getall" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="teachers" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zx.teachers.Repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.zx.teachers.Repository" />
+      <option name="MAIN_CLASS_NAME" value="com.zx.teachers.Repository.VideoRepositoryTest" />
+      <option name="METHOD_NAME" value="getall" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration name="TeachersApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="teachers" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.zx.teachers.TeachersApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.LessonServiceImplTest.testCgetsByname" />
+      <item itemvalue="Spring Boot.TeachersApplication" />
       <item itemvalue="JUnit.LessonServiceImplTest.testDgetEffLesson" />
       <item itemvalue="JUnit.LessonServiceImplTest.testEModifyLesson" />
       <item itemvalue="JUnit.UserServiceImplTest.testDModifyUser" />
       <item itemvalue="JUnit.LessonServiceImplTest.testFDeleteLesson" />
-      <item itemvalue="Spring Boot.TeachersApplication" />
+      <item itemvalue="JUnit.VideoRepositoryTest.getall" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.VideoRepositoryTest.getall" />
         <item itemvalue="JUnit.LessonServiceImplTest.testFDeleteLesson" />
         <item itemvalue="JUnit.UserServiceImplTest.testDModifyUser" />
         <item itemvalue="JUnit.LessonServiceImplTest.testEModifyLesson" />
         <item itemvalue="JUnit.LessonServiceImplTest.testDgetEffLesson" />
-        <item itemvalue="JUnit.LessonServiceImplTest.testCgetsByname" />
       </list>
     </recent_temporary>
   </component>
@@ -532,16 +659,11 @@
       <workItem from="1548604275491" duration="133000" />
       <workItem from="1548605201712" duration="1668000" />
       <workItem from="1548640108801" duration="6187000" />
+      <workItem from="1548667826016" duration="17558000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LessonServiceImplTest_testCgetsByname - 2019.01.24 at 10h 05m 24s.xml">
-      <configuration name="LessonServiceImplTest.testCgetsByname" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LessonServiceImplTest_testCgetsByname - 2019.01.24 at 10h 06m 01s.xml">
-      <configuration name="LessonServiceImplTest.testCgetsByname" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LessonServiceImplTest_testCgetsByname - 2019.01.24 at 10h 06m 50s.xml">
       <configuration name="LessonServiceImplTest.testCgetsByname" configurationId="JUnit" />
     </history-entry>
@@ -566,82 +688,89 @@
     <history-entry file="LessonServiceImplTest_testFDeleteLesson - 2019.01.24 at 10h 37m 17s.xml">
       <configuration name="LessonServiceImplTest.testFDeleteLesson" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="VideoRepositoryTest_getall - 2019.01.28 at 23h 21m 41s.xml">
+      <configuration name="VideoRepositoryTest.getall" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VideoRepositoryTest_getall - 2019.01.28 at 23h 24m 02s.xml">
+      <configuration name="VideoRepositoryTest.getall" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123162000" />
+    <option name="totallyTimeSpent" value="140720000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2624811" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.1923077" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.3260188" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" />
-      <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" weight="0.22988506" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="5" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39184952" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.3260188" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.22988506" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33124346" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1881663" />
       <window_info anchor="right" id="Bean Validation" order="10" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2624811" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
       <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="bottom" id="Spring" order="7" />
       <window_info id="Image Layers" order="3" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.22048067" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.27846155" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.1923077" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.3260188" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.3260188" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.22988506" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1881663" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39184952" />
       <window_info anchor="right" id="Bean Validation" order="10" />
     </layout-to-restore>
   </component>
@@ -673,20 +802,9 @@
         </entry>
       </map>
     </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list />
-          </value>
-        </entry>
-        <entry key="User">
-          <value>
-            <list />
-          </value>
-        </entry>
-      </map>
-    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -705,88 +823,22 @@
           <properties />
           <option name="timeStamp" value="24" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zx/teachers/Controller/LessonController.java</url>
+          <line>88</line>
+          <properties />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zx/teachers/Convertor/LessonConvertor.java</url>
+          <line>35</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
       </breakpoints>
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/sb-admin-2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="45" selection-start-line="45" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/dist/js/datas.json" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/enums/UtilsEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/Entity/News.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/Entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/footjs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/dist/js/sb-admin-2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="49" selection-start-line="49" selection-end-line="66" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="57" column="21" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/templates.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="21" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/Service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/jdk1.8/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class" />
     <entry file="jar://D:/jdk1.8/jre/lib/rt.jar!/sun/reflect/DelegatingMethodAccessorImpl.class" />
     <entry file="jar://D:/jdk1.8/src.zip!/java/lang/reflect/Method.java" />
@@ -797,13 +849,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/dist/css/userInfo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -851,13 +896,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.4.RELEASE/spring-web-5.1.4.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="109" selection-start-line="109" selection-end-line="109" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.4.RELEASE/spring-webmvc-5.1.4.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -877,16 +915,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#319#320#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/userdetail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2673">
-          <caret line="99" column="43" selection-start-line="99" selection-start-column="43" selection-end-line="99" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -894,9 +922,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4320">
           <caret line="194" selection-start-line="194" selection-end-line="194" />
-          <folding>
-            <element signature="e#6805#6806#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -926,22 +951,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/usercreate.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1678">
+        <state relative-caret-position="2295">
           <caret line="85" column="95" selection-start-line="85" selection-start-column="95" selection-end-line="85" selection-end-column="95" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/useredit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="26" column="132" selection-start-line="26" selection-start-column="132" selection-end-line="26" selection-end-column="132" />
+        <state relative-caret-position="702">
+          <caret line="26" column="104" selection-start-line="26" selection-start-column="104" selection-end-line="26" selection-end-column="104" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="567">
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -949,33 +974,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="284">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/ResultVO/LessonVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/Entity/Lesson.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="20" column="28" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="20" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/enums/LessonEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="37" column="42" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
-          <folding>
-            <element signature="e#362#363#0" expanded="true" />
-            <element signature="e#389#390#0" expanded="true" />
-            <element signature="e#419#420#0" expanded="true" />
-            <element signature="e#445#446#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -994,7 +992,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/Convertor/UserConvertor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
+        <state relative-caret-position="1485">
           <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1002,63 +1000,206 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/lessontables.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.4.RELEASE/spring-web-5.1.4.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="107" selection-start-line="107" selection-end-line="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/Entity/Lesson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/ResultVO/LessonVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/enums/LessonEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" selection-start-line="3" selection-end-line="7" selection-end-column="23" />
+          <folding>
+            <element signature="e#362#363#0" expanded="true" />
+            <element signature="e#389#390#0" expanded="true" />
+            <element signature="e#419#420#0" expanded="true" />
+            <element signature="e#445#446#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/Convertor/LessonConvertor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="232">
+          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/dist/css/userInfo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/userdetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="99" column="20" selection-start-line="99" selection-start-column="20" selection-end-line="99" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/lessoncreate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="63" column="67" lean-forward="true" selection-start-line="63" selection-start-column="67" selection-end-line="63" selection-end-column="76" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/Controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="45" column="33" lean-forward="true" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="33" />
+        <state relative-caret-position="129">
+          <caret line="72" column="116" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="116" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/menu.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/lessondetail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="262" column="45" lean-forward="true" selection-start-line="262" selection-start-column="45" selection-end-line="262" selection-end-column="45" />
+        <state relative-caret-position="318">
+          <caret line="98" column="62" selection-start-line="98" selection-start-column="62" selection-end-line="98" selection-end-column="62" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/lessontables.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/lessonedit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="90" column="45" selection-start-line="90" selection-start-column="45" selection-end-line="90" selection-end-column="45" />
-          <folding>
-            <element signature="e#86#92#1" expanded="true" />
-            <element signature="e#175#181#1" expanded="true" />
-          </folding>
+        <state relative-caret-position="480">
+          <caret line="26" column="66" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/Controller/LessonController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+        <state relative-caret-position="480">
+          <caret line="87" column="63" selection-start-line="87" selection-start-column="63" selection-end-line="87" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="265" column="84" selection-start-line="265" selection-start-column="84" selection-end-line="265" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/Controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="79" column="28" lean-forward="true" selection-start-line="79" selection-start-column="28" selection-end-line="79" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#485#486#0" expanded="true" />
+            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#635#636#0" expanded="true" />
+            <element signature="e#677#678#0" expanded="true" />
+            <element signature="e#1665#1666#0" expanded="true" />
+            <element signature="e#1708#1709#0" expanded="true" />
+            <element signature="e#2727#2728#0" expanded="true" />
+            <element signature="e#2751#2752#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/uploadlesson.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="14" column="66" selection-start-line="14" selection-start-column="66" selection-end-line="14" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/Entity/SelectLesson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/Entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="13" column="4" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/Repository/VideoRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/Controller/MainController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/Repository/UserRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="78" column="20" lean-forward="true" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
+        <state relative-caret-position="540">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/Entity/Video.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#552#553#0" expanded="true" />
-            <element signature="e#594#595#0" expanded="true" />
-            <element signature="e#1582#1583#0" expanded="true" />
-            <element signature="e#1606#1607#0" expanded="true" />
-            <element signature="e#2062#2063#0" expanded="true" />
-            <element signature="e#2088#2089#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/zx/teachers/Repository/VideoRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#366#367#0" expanded="true" />
+            <element signature="e#402#403#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/Service/VideoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zx/teachers/Service/Impl/VideoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#248#249#0" expanded="true" />
+            <element signature="e#275#276#0" expanded="true" />
+            <element signature="e#334#335#0" expanded="true" />
+            <element signature="e#361#362#0" expanded="true" />
+            <element signature="e#420#421#0" expanded="true" />
+            <element signature="e#447#448#0" expanded="true" />
           </folding>
         </state>
       </provider>

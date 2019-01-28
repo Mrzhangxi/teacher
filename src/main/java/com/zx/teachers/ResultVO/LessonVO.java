@@ -8,7 +8,7 @@ public class LessonVO {
     private String lessonName;
     private String lessonDescribe;
     private String lessonImage;
-    private String lessonClassHour;
+    private Integer lessonClassHour;
     private String lessonFlag;
     private String createTime;
     private String updateTime;

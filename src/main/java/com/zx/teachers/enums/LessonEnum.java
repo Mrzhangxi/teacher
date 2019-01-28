@@ -35,7 +35,7 @@ public enum LessonEnum {
 
     public static LessonEnum getLessonCode(String msg) {
         for (LessonEnum lessonEnum : LessonEnum.values()) {
-            if (msg == lessonEnum.getMsg()) {
+            if (msg.equals(lessonEnum.getMsg())) {
                 return lessonEnum;
             }
         }

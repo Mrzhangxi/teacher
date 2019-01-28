@@ -93,3 +93,12 @@ CREATE TABLE t_news (
     update_time timestamp not null default current_timestamp on update current_timestamp comment '修改时间',
     PRIMARY KEY (id)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS t_video;
+CREATE TABLE t_video(
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    video_name VARCHAR(255) NOT NULL,
+    video_href VARCHAR(255) NOT NULL,
+    lessson_id INT(11) NOT NULL,
+    PRIMARY KEY(id)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
