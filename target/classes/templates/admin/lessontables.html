@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head th:insert="/admin/head :: head">
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0" th:insert="/admin/menu :: menu">
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">课程列表</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            DataTables Advanced Tables
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>课程名称</th>
+                                        <th>课程描述</th>
+                                        <th>总课时</th>
+                                        <th>创建时间</th>
+                                        <th>状态</th>
+                                        <th>操作</th>
+                                        <!--<th>删除</th>-->
+                                    </tr>
+                                </thead>
+                                <tbody id="dataTables-tbody">
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+
+   <div th:insert="/admin/footjs :: foot"></div>
+    <script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+            // "serverSide": true,
+            ajax: {
+                url: "http://localhost:8080/lesson/getall",
+                type: "GET",
+                dataSrc: ""
+            },
+            columns: [
+                {"data": "id"},
+                {"data": "lessonName"},
+                {"data": "lessonDescribe"},
+                {"data": "lessonClassHour"},
+                {"data": "createTime"},
+                {"data": "lessonFlag"},
+                {"data": ""}
+            ],
+            "columnDefs": [
+                {
+                    targets: -1,
+                    visible: true,
+                    sortable: false,
+                    render: function(data, type, row){
+                        // var htms = '<a href="index.html?id=' + row.id + '"><i class="glyphicon glyphicon-eye-open"></i></a>'
+                        var htms = '<a href="/lessondetail?id=' + row.id + '"title="详情">' +
+                            '<i class="glyphicon glyphicon-eye-open"></i> ' +
+                            '</a> &nbsp;'+
+                            '<a href="/lessonedit?id=' + row.id + '" title="修改">' +
+                            '<i class="glyphicon glyphicon-pencil"></i> ' +
+                            '</a> &nbsp;'+
+                            '<a href="/lesson/delete?id=' + row.id + '"  title="删除">' +
+                            '<i class="glyphicon glyphicon-trash text-danger"></i> ' +
+                            '</a>';
+                        return htms;
+                    }
+                }
+            ],
+            language: {
+                "sProcessing": "处理中...",
+                "sLengthMenu": "显示 _MENU_ 项结果",
+                "sZeroRecords": "没有匹配结果",
+                "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+                "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+                "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+                "sInfoPostFix": "",
+                "sSearch": "搜索:",
+                "sUrl": "",
+                "sEmptyTable": "表中数据为空",
+                "sLoadingRecords": "载入中...",
+                "sInfoThousands": ",",
+                "oPaginate": {
+                    "sFirst": "首页",
+                    "sPrevious": "上页",
+                    "sNext": "下页",
+                    "sLast": "末页"
+                },
+                "oAria": {
+                    "sSortAscending": ": 以升序排列此列",
+                    "sSortDescending": ": 以降序排列此列"
+                }
+            }
+
+        });
+    });
+    </script>
+
+</body>
+
+</html>

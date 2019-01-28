@@ -66,7 +66,7 @@ public class UserController {
 
     /**
      * 创建用户
-     * @param user
+     * @param userVO, file
      * @return
      */
     @RequestMapping(value = "/create", method = RequestMethod.POST)
@@ -106,8 +106,19 @@ public class UserController {
      * @return
      */
     @RequestMapping(value = "/modify",method = RequestMethod.POST)
-    public String modifyUser(UserVO userVO) {
-        System.out.println(userVO);
+    public String modifyUser(UserVO userVO, @RequestParam(value = "newuserimg", required = false) MultipartFile file) {
+        log.info(userVO.toString());
+        String userImgPath = null;
+        if (!file.isEmpty()) {
+            //处理图片
+            try {
+                userImgPath = FileUtils.saveUserImg(file);
+                userVO.setUserImages(userImgPath);
+                System.out.println(userVO);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
         User user = UserConvertor.userVOToUser(userVO);
         user.setUpdateTime(new Date());
         userService.modifyUser(user);

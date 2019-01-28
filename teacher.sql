@@ -31,9 +31,9 @@ CREATE TABLE t_user (
     UNIQUE KEY UK_NAME (user_name)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
-INSERT INTO t_user(user_name, user_pwd, user_nickname, user_images, user_type, user_title, user_flag) VALUE ("zdh", "123321", "赵代红", "/", 1, "副教授", 1);
-INSERT INTO t_user(user_name, user_pwd, user_nickname, user_images, user_type, user_title, user_flag) VALUE ("zdh1", "123321", "赵代红1", "/", 1, "教授", 1);
-INSERT INTO t_user(user_name, user_pwd, user_nickname, user_images, user_type, user_title, user_flag) VALUE ("zdh2", "123321", "赵代红2", "/", 2, "领导", 1);
+INSERT INTO t_user(user_name, user_pwd, user_nickname, user_images, user_type, user_title, user_flag) VALUE ("zdh", "123321", "赵代红", "/", 100, "副教授", 1);
+INSERT INTO t_user(user_name, user_pwd, user_nickname, user_images, user_type, user_title, user_flag) VALUE ("zdh1", "123321", "赵代红1", "/", 100, "教授", 1);
+INSERT INTO t_user(user_name, user_pwd, user_nickname, user_images, user_type, user_title, user_flag) VALUE ("zdh2", "123321", "赵代红2", "/", 101, "领导", 1);
 
 DROP TABLE IF EXISTS t_lesson;
 CREATE TABLE t_lesson (

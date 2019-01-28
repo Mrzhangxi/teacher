@@ -1,11 +1,14 @@
 package com.zx.teachers.Controller;
 
+import com.zx.teachers.ResultVO.LessonVO;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
+@Slf4j
 public class MainController {
 
     /**
@@ -53,4 +56,27 @@ public class MainController {
         modelAndView.setViewName("admin/usercreate");
         return modelAndView;
     }
+
+    @RequestMapping("/lessontable")
+    public String lessonTables() {
+        return "admin/lessontables";
+    }
+
+    @RequestMapping("/lessonedit")
+    public ModelAndView lessonEdit(@RequestParam(value = "id", required = true) Integer id){
+        log.info("lessonedit执行");
+        return null;
+    }
+
+    @RequestMapping("/lessondetail")
+    public ModelAndView lessonDetail(@RequestParam(value = "id", required = true) Integer id) {
+        log.info("lessondetail执行");
+        return null;
+    }
+
+    @RequestMapping("/lessoncreate")
+    public ModelAndView lessonCreate(){
+        return null;
+    }
+
 }

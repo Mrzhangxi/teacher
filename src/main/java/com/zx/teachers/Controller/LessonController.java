@@ -1,7 +1,10 @@
 package com.zx.teachers.Controller;
 
+import com.zx.teachers.Convertor.LessonConvertor;
 import com.zx.teachers.Entity.Lesson;
+import com.zx.teachers.ResultVO.LessonVO;
 import com.zx.teachers.Service.LessonService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,10 +12,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
 @RequestMapping("/lesson")
+@Slf4j
 public class LessonController {
 
     @Autowired
@@ -38,8 +43,14 @@ public class LessonController {
 
     @RequestMapping("/getall")
     @ResponseBody
-    public List<Lesson> getAll() {
-        return lessonService.getLessonAll();
+    public List<LessonVO> getAll() {
+        log.info("getAllLesson执行");
+        List<Lesson> lessons = lessonService.getLessonAll();
+        List<LessonVO> lessonVOS = new ArrayList<LessonVO>();
+        for (Lesson lesson : lessons) {
+            lessonVOS.add(LessonConvertor.lessonToLesonVO(lesson));
+        }
+        return lessonVOS;
     }
 
     @RequestMapping("/getbyflag")

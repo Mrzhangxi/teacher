@@ -13,6 +13,10 @@ spring:
     suffix: .html
     encoding: UTF-8
     mode: html5
+  servlet:
+    multipart:
+      max-file-size: 10MB
+
 #  servlet:
 #    multipart:
-#      max-file-size: 10Mb
+#      max-file-size: 10m
