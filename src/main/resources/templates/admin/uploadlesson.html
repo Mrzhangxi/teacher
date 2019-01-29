@@ -10,11 +10,58 @@
     </nav>
 
     <div id="page-wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">上传课程</h1>
+            </div>
+            <!-- /.col-lg-12 -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            上传课程
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <form role="form" id="videoform" action="/video/create" method="post" enctype="multipart/form-data">
+                                        <div class="form-group">
+                                            <label>视频名称</label>
+                                            <input id="userName" name="userName" class="form-control">
+                                            <p class="help-block">必填项</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>所属课程</label>
+                                            <select id="lessonID" name="lessonID" class="form-control">
+                                                <option value="1">Java</option>
+                                                <option value="2">SQL</option>
+                                                <option value="待考试">待考试</option>
+                                                <option value="已下架">已下架</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>选择头像</label>
+                                            <input type="file" id="newuserimg" name="newuserimg" accept="image/*">
+                                        </div>
 
-        <video controls="controls">
-            <source src="\teacherFiles\Imges\教师职业道德2 标清(270P).qlv">
-        </video>
-        ddd
+                                        <button type="submit" class="btn btn-default">保存</button>
+                                        <button type="reset" class="btn btn-default">重置</button>
+                                    </form>
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </div>
+
     </div>
     <!-- /#page-wrapper -->
 </div>

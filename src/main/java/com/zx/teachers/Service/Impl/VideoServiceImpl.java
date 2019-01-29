@@ -3,6 +3,7 @@ package com.zx.teachers.Service.Impl;
 import com.zx.teachers.Entity.Video;
 import com.zx.teachers.Repository.VideoRepository;
 import com.zx.teachers.Service.VideoService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,16 +16,21 @@ public class VideoServiceImpl implements VideoService {
 
     @Override
     public List<Video> getAll() {
-        return null;
+        return videoRepository.findAll();
     }
 
     @Override
     public Video createVideo(Video video) {
-        return null;
+
+        return videoRepository.save(video);
     }
 
     @Override
     public Video modifyVideo(Video video) {
-        return null;
+        int id = video.getId();
+        Video oldVideo = videoRepository.findById(id);
+        BeanUtils.copyProperties(video, oldVideo);
+        oldVideo.setId(id);
+        return videoRepository.save(oldVideo);
     }
 }
