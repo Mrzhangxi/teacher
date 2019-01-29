@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<title>所有商品</title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Hind:400,700" rel="stylesheet">
+
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css" />
+
+	<!-- Slick -->
+	<link type="text/css" rel="stylesheet" href="../css/slick.css" />
+	<link type="text/css" rel="stylesheet" href="../css/slick-theme.css" />
+
+	<!-- nouislider -->
+	<link type="text/css" rel="stylesheet" href="../css/nouislider.min.css" />
+
+	<!-- Font Awesome Icon -->
+	<link rel="stylesheet" href="../css/font-awesome.min.css">
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="../css/style.css" />
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+</head>
+
+<body>
+	<!-- HEADER -->
+	<header>
+		<!-- header -->
+		<div id="header">
+			<div class="container">
+				<div class="pull-left">
+					<!-- Logo -->
+					<div class="header-logo">
+						<a class="logo" href="/">
+							<img src="../img/logo.png" alt="">
+						</a>
+					</div>
+					<!-- /Logo -->
+
+					<!-- Search -->
+					<!-- /Search -->
+				</div>
+				<div class="pull-right">
+					<ul class="header-btns">
+						<!-- Account -->
+						<li class="header-account dropdown default-dropdown">
+							<div class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="true">
+								<div class="header-btns-icon">
+									<i class="fa fa-user-o"></i>
+								</div>
+								<strong class="text-uppercase">我的账号(Account) <i class="fa fa-caret-down"></i></strong>
+							</div>
+
+							<span sec:authorize="isAnonymous()">
+							<a href="/admin/succeed" class="text-uppercase">登录</a> / <a href="/register" class="text-uppercase">注册</a>
+							</span>
+							<span sec:authorize="isAuthenticated()">
+								你好，<span sec:authentication="name"></span>
+							</span>
+
+							<ul class="custom-menu">
+								<span sec:authorize="isAnonymous()">
+									<li><a href="/admin/succeed"><i class="fa fa-unlock-alt"></i> 登录</a></li>
+								</span>
+								<span sec:authorize="isAuthenticated()">
+									<li><a href="/logout"><i class="fa fa-unlock-alt"></i> 退出</a></li>
+								</span>
+								<!--<li><a href="/admin/login"><i class="fa fa-unlock-alt"></i> Login</a></li>-->
+								<!--<li><a href="#"><i class="fa fa-user-plus"></i> Create An Account</a></li>-->
+							</ul>
+						</li>
+						<!-- /Account -->
+
+						<!-- Cart -->
+						<li class="header-cart dropdown default-dropdown">
+							<a href="/shop/checkout" class="dropdown-toggle" >
+								<div class="header-btns-icon">
+									<i class="fa fa-shopping-cart"></i>
+								</div>
+								<strong class="text-uppercase">购物车(checkOut)</strong>
+								<p>结算</p>
+							</a>
+						</li>
+						<!-- /Cart -->
+
+						<!-- Mobile nav toggle-->
+						<li class="nav-toggle">
+							<button class="nav-toggle-btn main-btn icon-btn"><i class="fa fa-bars"></i></button>
+						</li>
+						<!-- / Mobile nav toggle -->
+					</ul>
+				</div>
+			</div>
+			<!-- header -->
+		</div>
+		<!-- container -->
+	</header>
+	<!-- /HEADER -->
+
+	<!-- NAVIGATION -->
+	<div id="navigation">
+		<!-- container -->
+		<div class="container">
+			<div id="responsive-nav">
+				<!-- category nav -->
+				<div class="category-nav">
+					<span class="category-header">欢迎您 </span>
+				</div><!-- /category nav -->
+
+				<!-- menu nav -->
+				<div class="menu-nav">
+					<span class="menu-header">Menu <i class="fa fa-bars"></i></span>
+					<ul class="menu-list">
+						<li><a href="/">首页</a></li>
+						<li><a href="/shop/allGoods">全部商品</a></li>
+						<li><a href="/admin/index">登入电力管理</a></li>
+					</ul>
+				</div>
+				<!-- menu nav -->
+			</div>
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /NAVIGATION -->
+
+	<!-- BREADCRUMB -->
+	<div id="breadcrumb">
+		<div class="container">
+			<ul class="breadcrumb">
+				<li><a href="/">主页</a></li>
+				<li class="active">所有商品</li>
+			</ul>
+		</div>
+	</div>
+	<!-- /BREADCRUMB -->
+
+	<!-- section -->
+	<div class="section">
+
+		<!-- container -->
+		<div class="container">
+
+			<div id="product-slick-2" class="product-slick">
+				<!-- Product Single -->
+				<div th:each="good:${allGoods}" class="product product-single">
+					<div class="product-thumb">
+						<button th:text="${good.goods_des}" class="main-btn quick-view"> Quick view</button>
+						<img src="../img/product06.jpg" alt="">
+					</div>
+					<div class="product-body">
+						<h3 th:text="'￥' + ${good.goods_price}" class="product-price">$32.50</h3>
+						<div class="product-rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-o empty"></i>
+						</div>
+						<h2 th:text="${good.goods_name}" class="product-name"><a href="#">Product Name Goes Here</a></h2>
+						<div class="product-btns">
+							<form action="/shop/addShopCar">
+								<input type="hidden" name="shopID" th:value="${good.id}">
+								<input type="submit" class="primary-btn add-to-cart" value="🛒添加到购物车">
+							</form>
+						</div>
+					</div>
+				</div>
+				<!-- /Product Single -->
+
+				<!-- Product Single -->
+
+
+
+
+				<!-- /row -->
+		</div>
+
+
+		<!-- /container -->
+	</div>
+	<!-- /section -->
+
+	<!-- FOOTER -->
+		<footer id="footer" class="section section-grey">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<!-- footer widget -->
+					<div class="col-md-3 col-sm-6 col-xs-6">
+						<div class="footer">
+							<!-- footer logo -->
+							<div class="footer-logo">
+								<a class="logo" href="#">
+									<img src="../img/logo.png" alt="">
+								</a>
+							</div>
+							<!-- /footer logo -->
+
+							<p>XXX电力管理系统，为您提供方便快捷的电力管理与销售</p>
+
+							<!-- footer social -->
+							<ul class="footer-social">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+								<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							</ul>
+							<!-- /footer social -->
+						</div>
+					</div>
+					<!-- /footer widget -->
+
+					<!-- footer widget -->
+					<div class="col-md-3 col-sm-6 col-xs-6">
+						<div class="footer">
+							<h3 class="footer-header">我的账户</h3>
+							<ul class="list-links">
+								<li><a href="/admin/index">后台管理</a></li>
+								<li><a href="/shop/checkout">结算商品</a></li>
+
+							</ul>
+						</div>
+					</div>
+					<!-- /footer widget -->
+
+					<div class="clearfix visible-sm visible-xs"></div>
+
+					<!-- footer widget -->
+					<div class="col-md-3 col-sm-6 col-xs-6">
+						<div class="footer">
+							<h3 class="footer-header">用户服务</h3>
+							<ul class="list-links">
+								<li><a href="/aboutUS">关于我</a></li>
+								<li><a href="/aboutGoods">关于商品</a></li>
+								<li><a href="/FAQ">常见问题</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- /footer widget -->
+
+					<!-- footer subscribe -->
+					<div class="col-md-3 col-sm-6 col-xs-6">
+						<div class="footer">
+							<h3 class="footer-header">联系方式</h3>
+							<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>-->
+							<ul class="list-links">
+								<li><strong>电话：1803582xxxx</strong></li>
+								<li><strong>邮箱：y6622576@163.com</strong></li>
+								<li><strong>QQ:8461XXXX0</strong></li>
+							</ul>
+						</div>
+					</div>
+					<!-- /footer subscribe -->
+				</div>
+
+			</div>
+			<!-- /container -->
+		</footer>
+		<!-- /FOOTER -->
+
+	<!-- jQuery Plugins -->
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/slick.min.js"></script>
+		<script src="../js/nouislider.min.js"></script>
+		<script src="../js/jquery.zoom.min.js"></script>
+		<script src="../js/main.js"></script>
+
+</body>
+
+</html>

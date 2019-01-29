@@ -27,12 +27,12 @@
                                     <form role="form" id="videoform" action="/video/create" method="post" enctype="multipart/form-data">
                                         <div class="form-group">
                                             <label>视频名称</label>
-                                            <input id="userName" name="userName" class="form-control">
+                                            <input id="videoName" name="videoName" class="form-control">
                                             <p class="help-block">必填项</p>
                                         </div>
                                         <div class="form-group">
                                             <label>所属课程</label>
-                                            <select id="lessonID" name="lessonID" class="form-control">
+                                            <select id="lesssonId" name="lesssonId" class="form-control">
                                                 <div th:each="lesson:${lessonList}">
                                                    <option th:value="${lesson.id}" th:text="${lesson.lessonName}"></option>
                                                 </div>

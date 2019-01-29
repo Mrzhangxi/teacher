@@ -24,7 +24,7 @@ public class MainController {
      * 首页
      * @return
      */
-    @RequestMapping("/")
+    @RequestMapping("/admin")
     public String welcome() {
         return "admin/index";
     }

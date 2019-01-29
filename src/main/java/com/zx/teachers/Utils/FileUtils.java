@@ -17,7 +17,7 @@ public class FileUtils {
         try {
             BufferedOutputStream out = null;
             String filename = createRandomName() + "." + file.getOriginalFilename().split("[.]")[1];
-            outfile = new File(createRandomPath(), filename);
+            outfile = new File(createPath(), filename);
             log.info(outfile.getName());
             out = new BufferedOutputStream(new FileOutputStream(outfile));
             System.out.println(file.getName());
@@ -34,13 +34,44 @@ public class FileUtils {
 //        return outfile.getPath();
     }
 
+    public static String saveVideo(MultipartFile file) throws IOException {
+        File outfile = null;
+        try {
+            BufferedOutputStream out = null;
+//            String filename = createRandomName() + "." + file.getOriginalFilename().split("[.]")[1];
+            File temp = createVideoPath();
+            String videoName = file.getOriginalFilename();
+            outfile = new File(temp, videoName);
+            log.info(outfile.getName());
+            out = new BufferedOutputStream(new FileOutputStream(outfile));
+            out.write(file.getBytes());
+            out.flush();
+            out.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        String[] strings = outfile.getCanonicalPath().split("static");
+        return outfile.getCanonicalPath().split("static")[1];
+    }
+
     /**
      * 返回文件保存路径，如果路径文件夹存在，则返回路径，如果不存在，则创建路径
      * @return
      */
-    public static File createRandomPath() throws FileNotFoundException {
+    public static File createPath() throws FileNotFoundException {
 
         File file  = new File(ResourceUtils.getURL("classpath:").getPath() + "/static/teacherFiles/Imges");
+        if (!file.exists()){
+            file.mkdirs();
+        }
+        return file;
+    }
+
+    public static File createVideoPath() throws FileNotFoundException {
+
+        File file  = new File(ResourceUtils.getURL("classpath:").getPath() + "/static/teacherFiles/Videos");
         if (!file.exists()){
             file.mkdirs();
         }
