@@ -33,15 +33,14 @@
                                         <div class="form-group">
                                             <label>所属课程</label>
                                             <select id="lessonID" name="lessonID" class="form-control">
-                                                <option value="1">Java</option>
-                                                <option value="2">SQL</option>
-                                                <option value="待考试">待考试</option>
-                                                <option value="已下架">已下架</option>
+                                                <div th:each="lesson:${lessonList}">
+                                                   <option th:value="${lesson.id}" th:text="${lesson.lessonName}"></option>
+                                                </div>
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <label>选择头像</label>
-                                            <input type="file" id="newuserimg" name="newuserimg" accept="image/*">
+                                            <label>选择文件</label>
+                                            <input type="file" id="videoFile" name="videoFile" accept="video/*">
                                         </div>
 
                                         <button type="submit" class="btn btn-default">保存</button>

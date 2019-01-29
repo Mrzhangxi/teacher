@@ -1,16 +1,25 @@
 package com.zx.teachers.Controller;
 
+import com.sun.org.apache.xpath.internal.operations.Mod;
+import com.zx.teachers.Entity.Lesson;
 import com.zx.teachers.ResultVO.LessonVO;
+import com.zx.teachers.Service.LessonService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.List;
+
 @Controller
 @Slf4j
 public class MainController {
 
+
+    @Autowired
+    private LessonService lessonService;
     /**
      * 首页
      * @return
@@ -88,7 +97,12 @@ public class MainController {
     }
 
     @RequestMapping("/uploadlesson")
-    public String uploadLesson() {
-        return "admin/uploadlesson";
+    public ModelAndView uploadLesson() {
+        List<Lesson> lessons = lessonService.getLessonAll();
+
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("lessonList", lessons);
+        modelAndView.setViewName("admin/uploadlesson");
+        return modelAndView;
     }
 }
