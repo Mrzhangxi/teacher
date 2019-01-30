@@ -10,4 +10,9 @@ public class TeacherController {
     public String welcome() {
         return "teacher/index";
     }
+
+    @RequestMapping("/templates")
+    public String templates() {
+        return "teacher/templates";
+    }
 }

@@ -36,108 +36,16 @@
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 
+
 </head>
 
 <body>
 	<!-- HEADER -->
-	<header>
-		<!-- header -->
-		<div id="header">
-			<div class="container">
-				<div class="pull-left">
-					<!-- Logo -->
-					<div class="header-logo">
-						<a class="logo" href="/">
-							<img src="../img/logo.png" alt="">
-						</a>
-					</div>
-					<!-- /Logo -->
-
-					<!-- Search -->
-					<!-- /Search -->
-				</div>
-				<div class="pull-right">
-					<ul class="header-btns">
-						<!-- Account -->
-						<li class="header-account dropdown default-dropdown">
-							<div class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="true">
-								<div class="header-btns-icon">
-									<i class="fa fa-user-o"></i>
-								</div>
-								<strong class="text-uppercase">我的账号(Account) <i class="fa fa-caret-down"></i></strong>
-							</div>
-
-							<!--<span sec:authorize="isAnonymous()">-->
-							<!--<a href="/admin/succeed" class="text-uppercase">登录</a> / <a href="/register" class="text-uppercase">注册</a>-->
-							<!--</span>-->
-							<!--<span sec:authorize="isAuthenticated()">-->
-								<!--你好，<span sec:authentication="name"></span>-->
-							<!--</span>-->
-
-							<!--<ul class="custom-menu">-->
-								<!--<span sec:authorize="isAnonymous()">-->
-									<!--<li><a href="/admin/succeed"><i class="fa fa-unlock-alt"></i> 登录</a></li>-->
-								<!--</span>-->
-								<!--<span sec:authorize="isAuthenticated()">-->
-									<!--<li><a href="/logout"><i class="fa fa-unlock-alt"></i> 退出</a></li>-->
-								<!--</span>-->
-								<!--&lt;!&ndash;<li><a href="/admin/login"><i class="fa fa-unlock-alt"></i> Login</a></li>&ndash;&gt;-->
-								<!--&lt;!&ndash;<li><a href="#"><i class="fa fa-user-plus"></i> Create An Account</a></li>&ndash;&gt;-->
-							<!--</ul>-->
-						</li>
-						<!-- /Account -->
-
-						<!-- Cart -->
-						<li class="header-cart dropdown default-dropdown">
-							<a href="/shop/checkout" class="dropdown-toggle" >
-								<div class="header-btns-icon">
-									<i class="fa fa-shopping-cart"></i>
-								</div>
-								<strong class="text-uppercase">购物车(checkOut)</strong>
-								<p>结算</p>
-							</a>
-						</li>
-						<!-- /Cart -->
-
-						<!-- Mobile nav toggle-->
-						<li class="nav-toggle">
-							<button class="nav-toggle-btn main-btn icon-btn"><i class="fa fa-bars"></i></button>
-						</li>
-						<!-- / Mobile nav toggle -->
-					</ul>
-				</div>
-			</div>
-			<!-- header -->
-		</div>
-		<!-- container -->
-	</header>
+	<div th:insert="/teacher/head :: head"></div>
 	<!-- /HEADER -->
 
 	<!-- NAVIGATION -->
-	<div id="navigation">
-		<!-- container -->
-		<div class="container">
-			<div id="responsive-nav">
-
-				<div class="category-nav">
-					<span class="category-header">欢迎您 </span>
-				</div>
-				<!-- /category nav -->
-
-				<!-- menu nav -->
-				<div class="menu-nav">
-					<span class="menu-header">Menu <i class="fa fa-bars"></i></span>
-					<ul class="menu-list">
-						<li><a href="/">首页</a></li>
-						<li><a href="/shop/allGoods">全部商品</a></li>
-						<li><a href="/admin/index">登入电力管理</a></li>
-					</ul>
-				</div>
-				<!-- menu nav -->
-			</div>
-		</div>
-		<!-- /container -->
-	</div>
+	<div th:insert="/teacher/head :: navigation"></div>
 	<!-- /NAVIGATION -->
 
 	<!-- HOME -->
@@ -157,20 +65,20 @@
 					<!-- banner -->
 					<div class="banner banner-1">
 						<img src="../img/banner02.jpg" alt="">
-						<!--<div class="banner-caption">-->
-							<!--<h1 class="primary-color">HOT DEAL<br><span class="white-color font-weak">Up to 50% OFF</span></h1>-->
-							<!--<button class="primary-btn">Shop Now</button>-->
-						<!--</div>-->
+						<div class="banner-caption">
+							<h1 class="primary-color">HOT DEAL<br><span class="white-color font-weak">Up to 50% OFF</span></h1>
+							<button class="primary-btn">Shop Now</button>
+						</div>
 					</div>
 					<!-- /banner -->
 
 					<!-- banner -->
 					<div class="banner banner-1">
 						<img src="../img/banner03.jpg" alt="">
-						<!--<div class="banner-caption">-->
-							<!--<h1 class="white-color">New Product <span>Collection</span></h1>-->
-							<!--<button class="primary-btn">Shop Now</button>-->
-						<!--</div>-->
+						<div class="banner-caption">
+							<h1 class="white-color">Java <span>从入门到放弃</span></h1>
+							<button class="primary-btn">立刻学习</button>
+						</div>
 					</div>
 					<!-- /banner -->
 				</div>
@@ -190,7 +98,7 @@
 				<!-- section-title -->
 				<div class="col-md-12">
 					<div class="section-title">
-						<h2 class="title">居民生活用电</h2>
+						<h2 class="title">推荐课程</h2>
 						<div class="pull-right">
 							<div class="product-slick-dots-1 custom-dots"></div>
 						</div>
@@ -204,7 +112,7 @@
 					<div class="banner banner-2">
 						<img src="../img/banner14.jpg" alt="">
 						<div class="banner-caption">
-							<h2 class="white-color">居民生活用电</h2>
+							<h2 class="white-color">推荐课程</h2>
 							<button class="primary-btn"><a href="/shop/allGoods">全部</a></button>
 						</div>
 					</div>
@@ -216,389 +124,163 @@
 				<div class="col-md-9 col-sm-6 col-xs-6">
 					<div class="row">
 						<div id="product-slick-1" class="product-slick">
-							<!-- Product Single -->
+							 <!--Product Single-->
 							<div class="product product-single">
 								<div class="product-thumb">
-									<button class="main-btn quick-view"> Quick view</button>
-									<img src="../img/product06.jpg" alt="">
+									<button class="main-btn quick-view"><a class="studyurl" href="/admin"> 马上学习 </a></button>
+									<img id="lessonimgurl" class="lessonimgurl" src="../img/product06.jpg" alt="">
 								</div>
 								<div class="product-body">
-									<h3 class="product-price">￥50.00</h3>
-									<div class="product-rating">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star-o empty"></i>
-									</div>
-									<h2  class="product-name"><a href="#">100度市电卡</a></h2>
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o empty"></i>
+                                    </div>
+									<h2 class="product-name"><a class="studyurl1" href="#">100度市电卡</a></h2>
 									<div class="product-btns">
-										<form action="/shop/addShopCar">
+										<form class="studyurl2" action="/shop/addShopCar">
 											<input type="hidden" name="shopID" >
-											<input type="submit" class="primary-btn add-to-cart" value="🛒添加到购物车">
+											<input type="submit" class="primary-btn add-to-cart" value="(。＿ 。） ✎＿去学习">
 										</form>
 									</div>
 								</div>
 							</div>
-							<!-- /Product Single -->
-
-							<!-- Product Single -->
-							<div class="product product-single">
-								<div class="product-thumb">
-									<button  class="main-btn quick-view"> Quick view</button>
-									<img src="../img/product06.jpg" alt="">
-								</div>
-								<div class="product-body">
-									<h3 class="product-price">￥25.00</h3>
-									<div class="product-rating">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star-o empty"></i>
-									</div>
-									<h2  class="product-name"><a href="#">50度市电卡</a></h2>
-									<div class="product-btns">
-										<form action="/shop/addShopCar">
-											<input type="hidden" name="shopID">
-											<input type="submit" class="primary-btn add-to-cart" value="🛒添加到购物车">
-										</form>
-									</div>
-								</div>
-							</div>
-							<!-- /Product Single -->
-
-							<!-- Product Single -->
-							<div class="product product-single">
-								<div class="product-thumb">
-									<button  class="main-btn quick-view"> Quick view</button>
-									<img src="../img/product06.jpg" alt="">
-								</div>
-								<div class="product-body">
-									<h3  class="product-price">￥10.00</h3>
-									<div class="product-rating">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star-o empty"></i>
-									</div>
-									<h2  class="product-name"><a href="#">20度市电卡</a></h2>
-									<div class="product-btns">
-										<form action="/shop/addShopCar">
-											<input type="hidden" name="shopID">
-											<input type="submit" class="primary-btn add-to-cart" value="🛒添加到购物车">
-										</form>
-									</div>
-								</div>
-							</div>
-							<!-- /Product Single -->
-
-							<!-- Product Single -->
-							<div class="product product-single">
-								<div class="product-thumb">
-									<button  class="main-btn quick-view"> Quick view</button>
-									<img src="../img/product06.jpg" alt="">
-								</div>
-								<div class="product-body">
-									<h3  class="product-price">￥5.00</h3>
-									<div class="product-rating">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star-o empty"></i>
-									</div>
-									<h2 class="product-name"><a href="#">10度市电卡</a></h2>
-									<div class="product-btns">
-										<form action="/shop/addShopCar">
-											<input type="hidden" name="shopID">
-											<input type="submit" class="primary-btn add-to-cart" value="🛒添加到购物车">
-										</form>
-									</div>
-								</div>
-							</div>
-							<!-- /Product Single -->
-						</div>
-					</div>
-				</div>
-				<!-- /Product Slick -->
-			</div>
-			<!-- /row -->
-
-			<!-- row -->
-			<div class="row">
-				<!-- section title -->
-				<div class="col-md-12">
-					<div class="section-title">
-						<h2 class="title">工业生产用电</h2>
-						<div class="pull-right">
-							<div class="product-slick-dots-2 custom-dots">
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- section title -->
-
-				<!--工业用电图片-->
-				<div class="col-md-3 col-sm-6 col-xs-6">
-					<div class="banner banner-2">
-						<img src="../img/banner15.jpg" alt="">
-						<div class="banner-caption">
-							<h2 class="white-color">工业生产用电</h2>
-							<button class="primary-btn"><a href="/shop/allGoods">全部</a></button>
-						</div>
-					</div>
-				</div>
-
-				<!-- Product Single -->
-				<div class="col-md-3 col-sm-6 col-xs-6">
-				</div>
-				<!-- /Product Single -->
-
-				<!-- Product Slick -->
-				<div class="col-md-9 col-sm-6 col-xs-6">
-					<div class="row">
-						<div id="product-slick-2" class="product-slick">
-							<!-- Product Single -->
-							<div class="product product-single">
-								<div class="product-thumb">
-									<button class="main-btn quick-view"> Quick view</button>
-									<img src="../img/product06.jpg" alt="">
-								</div>
-								<div class="product-body">
-									<h3  class="product-price">$32.50</h3>
-									<div class="product-rating">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star-o empty"></i>
-									</div>
-									<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-									<div class="product-btns">
-										<form action="/shop/addShopCar">
-											<input type="hidden" name="shopID">
-											<input type="submit" class="primary-btn add-to-cart" value="🛒添加到购物车">
-										</form>
-									</div>
-								</div>
-							</div>
-							<!-- /Product Single -->
-
-							<!-- Product Single -->
-							<div class="product product-single">
-								<div class="product-thumb">
-									<button class="main-btn quick-view"> Quick view</button>
-									<img src="../img/product06.jpg" alt="">
-								</div>
-								<div class="product-body">
-									<h3  class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
-									<div class="product-rating">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star-o empty"></i>
-									</div>
-									<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-									<div class="product-btns">
-										<form action="/shop/addShopCar">
-											<input type="hidden" name="shopID">
-											<input type="submit" class="primary-btn add-to-cart" value="🛒添加到购物车">
-										</form>
-									</div>
-								</div>
-							</div>
-							<!-- /Product Single -->
-
-							<!-- Product Single -->
-							<div class="product product-single">
-								<div class="product-thumb">
-									<button class="main-btn quick-view"> Quick view</button>
-									<img src="../img/product06.jpg" alt="">
-								</div>
-								<div class="product-body">
-									<h3 class="product-price">$32.50</h3>
-									<div class="product-rating">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star-o empty"></i>
-									</div>
-									<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-									<div class="product-btns">
-										<form action="/shop/addShopCar">
-											<input type="hidden" name="shopID" >
-											<input type="submit" class="primary-btn add-to-cart" value="🛒添加到购物车">
-										</form>
-									</div>
-								</div>
-							</div>
-							<!-- /Product Single -->
-
-							<!-- Product Single -->
-							<div class="product product-single">
-								<div class="product-thumb">
-									<button  class="main-btn quick-view"> Quick view</button>
-									<img src="../img/product06.jpg" alt="">
-								</div>
-								<div class="product-body">
-									<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
-									<div class="product-rating">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star-o empty"></i>
-									</div>
-									<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-									<div class="product-btns">
-										<form action="/shop/addShopCar">
-											<input type="hidden" name="shopID" >
-											<input type="submit" class="primary-btn add-to-cart" value="🛒添加到购物车">
-										</form>
-									</div>
-								</div>
-							</div>
-							<div class="product product-single">
-								<div class="product-thumb">
-									<button  class="main-btn quick-view"> Quick view</button>
-									<img src="../img/product06.jpg" alt="">
-								</div>
-								<div class="product-body">
-									<h3 class="product-price">￥5.00</h3>
-									<div class="product-rating">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star-o empty"></i>
-									</div>
-									<h2 class="product-name"><a href="#">10度市电卡</a></h2>
-									<div class="product-btns">
-										<form action="/shop/addShopCar">
-											<input type="hidden" name="shopID">
-											<input type="submit" class="primary-btn add-to-cart" value="🛒添加到购物车">
-										</form>
-									</div>
-								</div>
-							</div>
-							<!-- /Product Single -->
+							 <!--/Product Single -->
+                            <!--Product Single-->
+                            <div class="product product-single">
+                                <div class="product-thumb">
+                                    <button class="main-btn quick-view"><a class="studyurl" href="/admin"> 马上学习 </a></button>
+                                    <img class="lessonimgurl" src="../img/product07.jpg" alt="">
+                                </div>
+                                <div class="product-body">
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o empty"></i>
+                                    </div>
+                                    <h2 class="product-name"><a class="studyurl1" href="#">100度市电卡</a></h2>
+                                    <div class="product-btns">
+                                        <form class="studyurl2" action="/shop/addShopCar">
+                                            <input type="hidden" name="shopID" >
+                                            <input type="submit" class="primary-btn add-to-cart" value="(。＿ 。） ✎＿去学习">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/Product Single --><!--Product Single-->
+                            <div class="product product-single">
+                                <div class="product-thumb">
+                                    <button class="main-btn quick-view"><a class="studyurl" href="/admin"> 马上学习 </a></button>
+                                    <img class="lessonimgurl" src="../img/product08.jpg" alt="">
+                                </div>
+                                <div class="product-body">
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o empty"></i>
+                                    </div>
+                                    <h2 class="product-name"><a class="studyurl1" href="#">100度市电卡</a></h2>
+                                    <div class="product-btns">
+                                        <form class="studyurl2" action="/shop/addShopCar">
+                                            <input type="hidden" name="shopID" >
+                                            <input type="submit" class="primary-btn add-to-cart" value="(。＿ 。） ✎＿去学习">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/Product Single --><!--Product Single-->
+                            <div class="product product-single">
+                                <div class="product-thumb">
+                                    <button class="main-btn quick-view"><a class="studyurl" href="/admin"> 马上学习 </a></button>
+                                    <img class="lessonimgurl" src="../img/product09.jpg" alt="">
+                                </div>
+                                <div class="product-body">
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o empty"></i>
+                                    </div>
+                                    <h2 class="product-name"><a class="studyurl1" href="#">100度市电卡</a></h2>
+                                    <div class="product-btns">
+                                        <form class="studyurl2" action="/shop/addShopCar">
+                                            <input type="hidden" name="shopID" >
+                                            <input type="submit" class="primary-btn add-to-cart" value="(。＿ 。） ✎＿去学习">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/Product Single -->
 
 						</div>
 					</div>
 				</div>
 				<!-- /Product Slick -->
 			</div>
-			<!-- /row -->
+
 		</div>
 		<!-- /container -->
 	</div>
 	<!-- /section -->
 
 	<!-- FOOTER -->
-	<footer id="footer" class="section section-grey">
-		<!-- container -->
-		<div class="container">
-			<!-- row -->
-			<div class="row">
-				<!-- footer widget -->
-				<div class="col-md-3 col-sm-6 col-xs-6">
-					<div class="footer">
-						<!-- footer logo -->
-						<div class="footer-logo">
-							<a class="logo" href="#">
-		            <img src="../img/logo.png" alt="">
-		          </a>
-						</div>
-						<!-- /footer logo -->
-
-						<p>XXX电力管理系统，为您提供方便快捷的电力管理与销售</p>
-
-						<!-- footer social -->
-						<ul class="footer-social">
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-							<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-							<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-						</ul>
-						<!-- /footer social -->
-					</div>
-				</div>
-				<!-- /footer widget -->
-
-				<!-- footer widget -->
-				<div class="col-md-3 col-sm-6 col-xs-6">
-					<div class="footer">
-						<h3 class="footer-header">我的账户</h3>
-						<ul class="list-links">
-							<li><a href="/admin/index">后台管理</a></li>
-							<li><a href="/shop/checkout">结算商品</a></li>
-
-						</ul>
-					</div>
-				</div>
-				<!-- /footer widget -->
-
-				<div class="clearfix visible-sm visible-xs"></div>
-
-				<!-- footer widget -->
-				<div class="col-md-3 col-sm-6 col-xs-6">
-					<div class="footer">
-						<h3 class="footer-header">用户服务</h3>
-						<ul class="list-links">
-							<li><a href="/aboutUS">关于我</a></li>
-							<li><a href="/aboutGoods">关于商品</a></li>
-							<li><a href="/FAQ">常见问题</a></li>
-						</ul>
-					</div>
-				</div>
-				<!-- /footer widget -->
-
-				<!-- footer subscribe -->
-				<div class="col-md-3 col-sm-6 col-xs-6">
-					<div class="footer">
-						<h3 class="footer-header">联系方式</h3>
-						<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>-->
-						<ul class="list-links">
-							<li><strong>电话：1803582xxxx</strong></li>
-							<li><strong>邮箱：y6622576@163.com</strong></li>
-							<li><strong>QQ:8461XXXX0</strong></li>
-						</ul>
-					</div>
-				</div>
-				<!-- /footer subscribe -->
-			</div>
-			<!-- /row -->
-			<!--<hr>-->
-			<!--&lt;!&ndash; row &ndash;&gt;-->
-			<!--<div class="row">-->
-				<!--<div class="col-md-8 col-md-offset-2 text-center">-->
-					<!--&lt;!&ndash; footer copyright &ndash;&gt;-->
-					<!--<div class="footer-copyright">-->
-						<!--&lt;!&ndash; Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. &ndash;&gt;-->
-						<!--Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>-->
-						<!--&lt;!&ndash; Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. &ndash;&gt;-->
-					<!--</div>-->
-					<!--&lt;!&ndash; /footer copyright &ndash;&gt;-->
-				<!--</div>-->
-			<!--</div>-->
-			<!--&lt;!&ndash; /row &ndash;&gt;-->
-		</div>
-		<!-- /container -->
-	</footer>
+	<div th:insert="/teacher/foot :: foot"></div>
 	<!-- /FOOTER -->
 
 	<!-- jQuery Plugins -->
-	<script src="../js/jquery.min.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 	<script src="../js/slick.min.js"></script>
 	<script src="../js/nouislider.min.js"></script>
 	<script src="../js/jquery.zoom.min.js"></script>
-	<script src="../js/main.js"></script>
+	<script src="../js/main.js?id=1"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // $("#product-slick-1").html("")
+            $.ajax({
+                url: "http://localhost:8080/lesson/getall",
+                type: "GET",
+                dataType: "json",
+                success: function (data) {
+                    console.log($("#lessonimgurl"))
+                    $("#lessonimgurl").attr("src", data[1].lessonImage)
+                    console.log($(".lessonimgurl"))
+                    // $(".lessonimgurl").each(i,function (i) {
+                    //     $(this).attr("src", data[i].lessonImage)
+                    // })
+                    $(".lessonimgurl").each(function (i, n) {
+                        alert(data[i].lessonImage)
+                        var iurl = data[i].lessonImage;
+                        $(this).attr("src", data[i].lessonImage)
+                    })
+                    console.log($(".lessonimgurl")[1]);
+                    // $("#product-slick-1").html("");
+                    // $(".lessonimgurl")[1].attr("src", data[1].lessonImage)
+                    // $(".studyurl1")[1].html(data[1].lessonName)
+                    // $.each(data, function (i, n) {
+                    //     // $(".lessonimg"[i]).attr("src", data[i].lessonImage)
+                    //     // $(".studyurl1")[i].html(data[i].lessonName)
+                    //     // console.log($(".studyurl1")[i]);
+                    //     // console.log(n.lessonName);
+                    //     // console.log(data[i].lessonName);
+                    //     // console.log(n.lessonImage);
+                    //     // var imgurl = n.lessonImage
+                    //     // $(".studyurl1")[i].html(imgurl)
+                    // })
+
+                    // alert(data)
+                }
+            })
+        })
+    </script>
 
 
 </body>
