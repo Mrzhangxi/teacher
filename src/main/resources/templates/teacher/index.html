@@ -244,39 +244,21 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            // $("#product-slick-1").html("")
             $.ajax({
                 url: "http://localhost:8080/lesson/getall",
                 type: "GET",
                 dataType: "json",
                 success: function (data) {
-                    console.log($("#lessonimgurl"))
-                    $("#lessonimgurl").attr("src", data[1].lessonImage)
-                    console.log($(".lessonimgurl"))
-                    // $(".lessonimgurl").each(i,function (i) {
-                    //     $(this).attr("src", data[i].lessonImage)
-                    // })
+                    lessonlength = data.length;
+
                     $(".lessonimgurl").each(function (i, n) {
-                        alert(data[i].lessonImage)
-                        var iurl = data[i].lessonImage;
+                        i = i % lessonlength;
                         $(this).attr("src", data[i].lessonImage)
                     })
-                    console.log($(".lessonimgurl")[1]);
-                    // $("#product-slick-1").html("");
-                    // $(".lessonimgurl")[1].attr("src", data[1].lessonImage)
-                    // $(".studyurl1")[1].html(data[1].lessonName)
-                    // $.each(data, function (i, n) {
-                    //     // $(".lessonimg"[i]).attr("src", data[i].lessonImage)
-                    //     // $(".studyurl1")[i].html(data[i].lessonName)
-                    //     // console.log($(".studyurl1")[i]);
-                    //     // console.log(n.lessonName);
-                    //     // console.log(data[i].lessonName);
-                    //     // console.log(n.lessonImage);
-                    //     // var imgurl = n.lessonImage
-                    //     // $(".studyurl1")[i].html(imgurl)
-                    // })
-
-                    // alert(data)
+					$(".studyurl1").each(function (i, n) {
+                        i = i % lessonlength;
+                        $(this).html(data[i].lessonName)
+                    })
                 }
             })
         })

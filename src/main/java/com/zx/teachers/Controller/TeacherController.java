@@ -15,4 +15,9 @@ public class TeacherController {
     public String templates() {
         return "teacher/templates";
     }
+
+    @RequestMapping("/userlogin")
+    public String userlogin() {
+        return "userlogin";
+    }
 }
