@@ -250,7 +250,7 @@
                 dataType: "json",
                 success: function (data) {
                     lessonlength = data.length;
-
+                    // var i = Math.floor(Math.random()*10 - 6)
                     $(".lessonimgurl").each(function (i, n) {
                         i = i % lessonlength;
                         $(this).attr("src", data[i].lessonImage)

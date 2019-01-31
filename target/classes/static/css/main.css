@@ -1,0 +1,29 @@
+.lessongroup{
+    margin-top: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    /*padding-left: 100px;*/
+    height: 300px;
+    text-align: center;
+}
+
+.lessonrow {
+    width: 1240px;
+    clear: both;
+    height: 300px;
+}
+.product-single {
+    width: 300px;
+    margin-left: 5px;
+    margin-right: 5px;
+    float: left;
+}
+
+.fistsingle {
+
+    clear: left;
+}
+
+.lastsingle {
+    clear: right;
+}

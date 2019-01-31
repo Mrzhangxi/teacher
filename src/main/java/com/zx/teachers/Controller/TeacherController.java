@@ -20,4 +20,9 @@ public class TeacherController {
     public String userlogin() {
         return "userlogin";
     }
+
+    @RequestMapping("/alllesson")
+    public String alllesson() {
+        return "teacher/alllesson";
+    }
 }
